@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Kingdom of Dailyville — English Quest</title>
+<style>
+:root{
+  --ink:#243044;--navy:#17253d;--gold:#d9a441;--gold-light:#f7e7b8;
+  --green:#527c54;--green-light:#e8f0df;--purple:#684b88;--purple-light:#eee6f6;
+  --blue:#416b91;--blue-light:#e6eff7;--paper:#fffaf0;--line:#d8c9a8;
+  --red:#9e3e45;--red-light:#f8e5e3;
+}
+*{box-sizing:border-box}
+html{background:#e9e5dc}
+body{margin:0;color:var(--ink);font:15px/1.42 "Trebuchet MS",Arial,sans-serif;background:#e9e5dc}
+.page{max-width:980px;margin:22px auto;background:var(--paper);padding:24px 30px;box-shadow:0 5px 25px #0002}
+h1,h2,h3,.pixel,.mission-tag{font-family:"Courier New",monospace}
+h1{font-size:clamp(25px,4vw,38px);line-height:1.1;margin:8px 0;color:#fff;text-shadow:2px 2px #17253d}
+h2{font-size:21px;margin:0 0 8px}
+h3{font-size:16px;margin:12px 0 5px}
+p{margin:5px 0 9px}
+.hero{background:linear-gradient(135deg,#213653,#3e5b79 55%,#684b88);color:#fff;border:4px solid #17253d;padding:20px;text-align:center;position:relative}
+.hero .eyebrow{letter-spacing:2px;text-transform:uppercase;font-size:12px;color:#f7e7b8}
+.hero .sub{font-weight:bold;color:#f7e7b8}
+.pixel-art{height:112px;display:flex;align-items:center;justify-content:center;gap:18px;margin:8px 0 3px}
+.pixel-art .castle{font-size:64px;filter:drop-shadow(3px 3px #17253d)}
+.pixel-art .clock{font-size:47px;filter:drop-shadow(2px 2px #17253d)}
+.pixel-art .wizard{font-size:48px}
+.stats{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:10px}
+.pill{border:1px solid #d9a441;background:#fff4d6;color:#493716;padding:4px 9px;font:bold 11px "Courier New",monospace;border-radius:3px}
+.panel{border:2px solid var(--line);background:#fffdf7;padding:12px 14px;margin:12px 0;border-radius:5px}
+.panel-title{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.panel-title .icon{font-size:22px}
+.story{background:#f5ecd4;border-left:5px solid var(--gold);padding:10px 13px;margin:10px 0}
+.characters{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.character{border:1px solid var(--line);padding:9px;background:#fffdf7;display:flex;gap:10px;align-items:center}
+.character .emoji{font-size:36px;min-width:42px;text-align:center}
+.character strong{display:block}
+.character small{color:#687184}
+.mission{border:2px solid var(--green);border-radius:5px;margin:15px 0;overflow:hidden;background:#fffdf7}
+.mission.blue{border-color:var(--blue)}.mission.purple{border-color:var(--purple)}.mission.gold{border-color:var(--gold)}.mission.red{border-color:var(--red)}
+.mission-head{background:var(--green-light);padding:10px 13px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.blue .mission-head{background:var(--blue-light)}.purple .mission-head{background:var(--purple-light)}.gold .mission-head{background:var(--gold-light)}.red .mission-head{background:var(--red-light)}
+.mission-head h2{margin:0;font-size:18px}
+.mission-tag{font-size:11px;font-weight:bold;white-space:nowrap;border:1px solid currentColor;padding:4px 6px;border-radius:3px}
+.mission-body{padding:12px 14px}
+.challenge{border-top:1px dashed #d6c9ad;padding-top:7px;margin-top:8px}
+.challenge:first-child{border-top:0;padding-top:0;margin-top:0}
+ol,ul{padding-left:24px;margin:5px 0 8px}
+li{padding:2px 0}
+.blank{display:inline-block;min-width:90px;border-bottom:1px solid #526078;height:1em}
+.shortblank{display:inline-block;min-width:55px;border-bottom:1px solid #526078;height:1em}
+.wordbank{background:#f3f0e8;border:1px dashed #b5a88b;padding:5px 8px;margin:6px 0;font-weight:bold;text-align:center}
+.reward{display:flex;gap:10px;align-items:center;background:#f5ecd4;border:1px solid #d9bd72;padding:7px 10px;margin-top:9px}
+.reward .gem{font-size:27px}.reward strong{display:block;color:#76531a}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.quest-map{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;text-align:center;margin:10px 0}
+.quest-map div{background:#f4e9c9;border:1px solid #d5b76d;padding:7px 4px;font:bold 10px "Courier New",monospace}
+.quest-map b{display:block;font-size:19px;margin-bottom:3px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:7px 0}
+th,td{border:1px solid #d8c9a8;padding:6px;text-align:left}
+th{background:#f2e7c9}
+.checklist{columns:2;column-gap:20px;list-style:none;padding:0}
+.checklist li{break-inside:avoid}
+.footer{text-align:center;border-top:2px solid var(--gold);margin-top:14px;padding-top:10px;font-family:"Courier New",monospace;font-weight:bold;color:#526078}
+.teacher-key{background:#f2f0e9;border:2px dashed #8c8c84;padding:12px;margin-top:15px}
+.teacher-key h2{color:#50575f}
+.key-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.key-card{background:#fff;border:1px solid #d2d0c7;padding:8px}
+.key-card h3{margin:0 0 5px;color:#4f5d6b}
+.small{font-size:12px;color:#687184}
+button{border:0;background:#243b5b;color:#fff;font-weight:bold;padding:10px 15px;border-radius:4px;cursor:pointer}
+.toolbar{max-width:980px;margin:12px auto;text-align:right}
+@media(max-width:650px){.page{padding:14px}.characters,.two-col,.key-grid{grid-template-columns:1fr}.quest-map{grid-template-columns:1fr 1fr}.mission-head{align-items:flex-start;flex-direction:column}.pixel-art{height:80px}.pixel-art .castle{font-size:45px}}
+@page{size:A4 portrait;margin:8mm}
+@media print{
+ html,body{background:#fff!important;margin:0!important;padding:0!important;color:#202633;font-size:10pt;line-height:1.25}
+ .toolbar{display:none!important}
+ .page{max-width:none;margin:0;padding:0;box-shadow:none;background:#fff}
+ *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+ h1{font-size:25pt}h2{font-size:15pt}h3{font-size:11pt}
+ .hero{padding:10px 14px}.pixel-art{height:64px;margin:2px 0}.pixel-art .castle{font-size:40px}.pixel-art .clock{font-size:32px}.pixel-art .wizard{font-size:34px}
+ .panel{padding:7px 9px;margin:7px 0}.story{padding:7px 9px;margin:6px 0}
+ .characters{gap:6px}.character{padding:5px 7px}.character .emoji{font-size:25px}
+ .mission{margin:8px 0;break-inside:avoid}.mission-head{padding:6px 9px}.mission-body{padding:7px 9px}
+ .challenge{padding-top:5px;margin-top:5px}li{padding:1px 0}ol,ul{margin:3px 0 5px}
+ .reward{padding:4px 7px;margin-top:5px}.reward .gem{font-size:20px}
+ .quest-map{margin:5px 0}.quest-map div{padding:4px}.quest-map b{font-size:14px}
+ table{font-size:9pt;margin:4px 0}th,td{padding:4px}
+ .teacher-key{padding:8px;margin-top:8px}.key-card{padding:5px}.key-card h3{font-size:10pt}
+ .footer{margin-top:8px;padding-top:5px}
+ .page-break-avoid{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="toolbar"><button onclick="window.print()">🖨️ Print Worksheet / Imprimir</button></div>
+<main class="page">
+<header class="hero">
+  <div class="eyebrow">English Quest • 6th Grade</div>
+  <h1>THE KINGDOM OF DAILYVILLE</h1>
+  <div class="sub">THE LOST CLOCK</div>
+  <div class="pixel-art" aria-label="Castle, magical clock and wizard"><span class="castle">🏰</span><span class="clock">🕰️</span><span class="wizard">🧙</span></div>
+  <div>Restore the Royal Clock • Save the Kingdom!</div>
+  <div class="stats"><span class="pill">⚔️ MEDIEVAL RPG</span><span class="pill">🎮 5 QUESTS</span><span class="pill">⭐ 60 XP</span><span class="pill">⏱ 50 MIN</span></div>
+</header>
+
+<section class="panel">
+ <div class="panel-title"><span class="icon">📜</span><h2>The Lost Clock — Story</h2></div>
+ <p>For centuries, the <b>Royal Clock</b> kept the routines of Dailyville in order. But <b>Lord Chronos</b> stole its four magical fragments and cursed the kingdom!</p>
+ <p>The knights forgot their training, the wizards forgot their spells, and the citizens lost their daily habits. <b>King Aldric III</b> calls your guild to recover the fragments and restore the clock.</p>
+ <div class="story"><b>King Aldric III:</b> “Brave adventurers! Lord Chronos has stolen the Royal Clock! We must recover its four magical fragments. Only the bravest guild can save Dailyville!”</div>
+ <div class="characters">
+  <div class="character"><div class="emoji">👑</div><div><strong>King Aldric III</strong><small>King of Dailyville • Quest giver</small></div></div>
+  <div class="character"><div class="emoji">🧙‍♂️</div><div><strong>Lord Chronos</strong><small>Dark wizard • Main villain</small></div></div>
+ </div>
+</section>
+
+<section class="panel">
+ <div class="panel-title"><span class="icon">🧭</span><h2>Guild Progress</h2></div>
+ <p>Complete each mission to recover a clock fragment and earn XP. Work together: learning is your greatest power!</p>
+ <div class="quest-map">
+  <div><b>⚙️</b>Grammar Gear<br>Mission 1</div><div><b>🔮</b>Frequency Gear<br>Mission 2</div>
+  <div><b>⚙️</b>Order Gear<br>Mission 3</div><div><b>💎</b>Communication Gear<br>Mission 4</div>
+ </div>
+ <div class="wordbank">XP: Mission 1 (10) + Mission 2 (10) + Mission 3 (10) + Mission 4 (10) + Final Boss (20) = 60 XP</div>
+</section>
+
+<section class="mission">
+ <div class="mission-head"><h2>MISSION 1 — THE ROYAL COUNCIL</h2><span class="mission-tag">10 XP • GRAMMAR GEAR</span></div>
+ <div class="mission-body">
+  <p><b>Quest:</b> Lord Chronos corrupted the royal records. Restore the sentences using the Simple Present!</p>
+  <div class="challenge"><h3>⚔️ Challenge 1 — Restore the Royal Records</h3><p>Complete the sentences with the correct form of the verbs.</p>
+   <ol><li>I <span class="blank"></span> English every day. (study)</li><li>She <span class="blank"></span> soccer after school. (play)</li><li>They <span class="blank"></span> video games at night. (play)</li><li>He <span class="blank"></span> his homework in the afternoon. (do)</li><li>We <span class="blank"></span> breakfast at 7 o’clock. (eat)</li></ol>
+  </div>
+  <div class="challenge"><h3>🛡️ Challenge 2 — Defeat the Grammar Curse</h3><p>Correct the sentences.</p>
+   <ol><li>He play basketball. <span class="blank"></span></li><li>She study English. <span class="blank"></span></li><li>They plays video games. <span class="blank"></span></li></ol>
+  </div>
+  <div class="reward"><span class="gem">⚙️</span><div><strong>GRAMMAR GEAR RECOVERED!</strong>The royal records are restored. The clock is one step closer!</div></div>
+ </div>
+</section>
+
+<section class="mission gold">
+ <div class="mission-head"><h2>MISSION 2 — THE ROYAL TRAINING GROUNDS</h2><span class="mission-tag">10 XP • FREQUENCY GEAR</span></div>
+ <div class="mission-body">
+  <p><b>Quest:</b> The knights forgot their habits. Rebuild their daily routines to recover the second fragment!</p>
+  <div class="challenge"><h3>🏹 Challenge 1 — The Knights’ Habits</h3><p>Complete with the correct adverb of frequency.</p>
+   <div class="wordbank">always • usually • often • sometimes • rarely • never</div>
+   <ol><li>Sir Arthur trains every day. He <span class="shortblank"></span> trains.</li><li>He eats pizza from time to time. He <span class="shortblank"></span> eats pizza.</li><li>The royal wizard doesn’t drink coffee. He <span class="shortblank"></span> drinks coffee.</li><li>The knights play soccer on many days. They <span class="shortblank"></span> play soccer.</li><li>The king goes to the cinema once or twice a year. He <span class="shortblank"></span> goes to the cinema.</li></ol>
+  </div>
+  <div class="challenge"><h3>🧩 Challenge 2 — Rebuild the Daily Routine</h3><p>Organize the words.</p>
+   <ol><li>always / I / study / English <span class="blank"></span></li><li>plays / usually / she / volleyball <span class="blank"></span></li><li>never / he / eats / fish <span class="blank"></span></li><li>sometimes / we / watch / movies <span class="blank"></span></li></ol>
+  </div>
+  <div class="reward"><span class="gem">🔮</span><div><strong>FREQUENCY GEAR RECOVERED!</strong>The knights remember their daily habits.</div></div>
+ </div>
+</section>
+
+<section class="mission blue">
+ <div class="mission-head"><h2>MISSION 3 — THE CLOCK TOWER</h2><span class="mission-tag">10 XP • ORDER GEAR</span></div>
+ <div class="mission-body">
+  <p><b>Quest:</b> Lord Chronos scrambled the magical inscriptions. Repair the clock mechanism by restoring word order!</p>
+  <div class="challenge"><h3>🧱 Challenge 1 — Repair the Clock Mechanism</h3><p>Organize the words.</p>
+   <ol><li>usually / my / gets up / brother / at 6:30 <span class="blank"></span></li><li>I / sometimes / read / books / at night <span class="blank"></span></li><li>always / she / is / happy <span class="blank"></span></li><li>are / they / often / tired <span class="blank"></span></li></ol>
+  </div>
+  <div class="challenge"><h3>✨ Challenge 2 — The Magical Positioning</h3><p>Choose the correct alternative.</p>
+   <ol><li>She ______ studies English. <br>□ a) always &nbsp;&nbsp; □ b) is always</li><li>He ______ late for school. <br>□ a) never is &nbsp;&nbsp; □ b) is never</li><li>They ______ play basketball. <br>□ a) sometimes &nbsp;&nbsp; □ b) are sometimes</li><li>I ______ happy. <br>□ a) usually am &nbsp;&nbsp; □ b) am usually</li></ol>
+  </div>
+  <div class="reward"><span class="gem">⚙️</span><div><strong>ORDER GEAR RECOVERED!</strong>The clock tower starts moving again.</div></div>
+ </div>
+</section>
+
+<section class="mission purple">
+ <div class="mission-head"><h2>MISSION 4 — THE CITIZENS OF DAILYVILLE</h2><span class="mission-tag">10 XP • COMMUNICATION GEAR</span></div>
+ <div class="mission-body">
+  <p><b>Quest:</b> The citizens can’t communicate their routines. Help them rebuild their stories and recover the last fragment!</p>
+  <div class="challenge"><h3>📝 Challenge 1 — The Citizens’ Daily Routine</h3><p>Write <b>four sentences</b> about your daily routine.</p>
+   <ul><li>Use at least 3 different adverbs of frequency.</li><li>Use at least one sentence with <i>He</i> or <i>She</i>.</li><li>Use at least one sentence with the verb <i>to be</i>.</li></ul>
+   <p>Example: I always brush my teeth. I usually study English. I sometimes play video games. I am often tired after school.</p>
+   <p>1. <span class="blank"></span></p><p>2. <span class="blank"></span></p><p>3. <span class="blank"></span></p><p>4. <span class="blank"></span></p>
+  </div>
+  <div class="challenge"><h3>🤝 Challenge 2 — Guild Interview</h3><p>Interview a guild partner. Ask and answer!</p>
+   <div class="two-col"><div><b>Ask your partner:</b><ul><li>Do you always study English?</li><li>Do you usually play soccer?</li><li>Do you sometimes watch movies?</li><li>Do you often read books?</li></ul></div><div><b>Report:</b><p>Write two sentences about your partner.</p><p>Example: Maria usually plays soccer. She sometimes watches movies.</p><p>1. <span class="blank"></span></p><p>2. <span class="blank"></span></p></div></div>
+  </div>
+  <div class="reward"><span class="gem">💎</span><div><strong>COMMUNICATION GEAR RECOVERED!</strong>The citizens of Dailyville are reunited.</div></div>
+ </div>
+</section>
+
+<section class="mission red">
+ <div class="mission-head"><h2>FINAL BOSS — THE DARK LORD OF TIME</h2><span class="mission-tag">20 XP • THE ROYAL CLOCK</span></div>
+ <div class="mission-body">
+  <div class="pixel-art" style="height:65px"><span class="wizard">🧙‍♂️</span><span class="clock">🕰️</span><span class="wizard">⚡</span></div>
+  <p><b>Final Quest:</b> The four fragments are ready! Lord Chronos waits in the throne room. Complete the challenges to restore the Royal Clock and save Dailyville!</p>
+  <div class="challenge"><h3>⚔️ Boss Challenge 1 — Grammar Attack</h3><p>Complete.</p><ol><li>He <span class="shortblank"></span> (play) soccer every day.</li><li>She <span class="shortblank"></span> (study) English.</li><li>They <span class="shortblank"></span> (watch) TV at night.</li></ol></div>
+  <div class="challenge"><h3>🛡️ Boss Challenge 2 — Frequency Shield</h3><p>Complete with an adverb of frequency.</p><ol><li>I <span class="shortblank"></span> eat vegetables. (100%)</li><li>I <span class="shortblank"></span> go to the cinema. (50%)</li><li>I <span class="shortblank"></span> drink coffee. (0%)</li></ol></div>
+  <div class="challenge"><h3>🧹 Boss Challenge 3 — Order Breaker</h3><p>Correct the sentences.</p><ol><li>She always is happy. <span class="blank"></span></li><li>He never play soccer. <span class="blank"></span></li></ol></div>
+  <div class="challenge"><h3>🔮 Boss Challenge 4 — Daily Routine Magic</h3><p>Write two sentences about your routine using adverbs of frequency.</p><p>1. <span class="blank"></span></p><p>2. <span class="blank"></span></p></div>
+  <div class="challenge"><h3>🧙 Boss Challenge 5 — Team Spell</h3><p>As a guild, create one sentence using a subject, an adverb of frequency, a Simple Present verb and a complement.</p><p class="story"><b>Example:</b> We usually play games after school.</p><p>Our spell: <span class="blank"></span></p></div>
+  <div class="reward"><span class="gem">🕰️</span><div><strong>THE ROYAL CLOCK RESTORED!</strong>Lord Chronos is defeated. Dailyville is saved. You are Legendary English Heroes!</div></div>
+ </div>
+</section>
+
+<section class="panel">
+ <div class="panel-title"><span class="icon">🏆</span><h2>XP & Guild Rank</h2></div>
+ <table><thead><tr><th>Achievement</th><th>XP</th></tr></thead><tbody><tr><td>Mission 1 — Grammar Gear</td><td>10</td></tr><tr><td>Mission 2 — Frequency Gear</td><td>10</td></tr><tr><td>Mission 3 — Order Gear</td><td>10</td></tr><tr><td>Mission 4 — Communication Gear</td><td>10</td></tr><tr><td>Final Boss — Royal Clock</td><td>20</td></tr><tr><th>Total</th><th>60 XP</th></tr></tbody></table>
+ <div class="two-col"><div><b>Guild rank:</b><ul><li>0–20 XP: Apprentice</li><li>21–35 XP: Grammar Knight</li><li>36–50 XP: Frequency Master</li><li>51–60 XP: Legendary English Hero</li></ul></div><div><b>Earn XP for:</b><ul><li>Correct answers</li><li>Collaboration</li><li>Participation</li><li>Using English</li><li>Self-correction</li></ul></div></div>
+ <p class="small">XP encourages learning; it should not punish students who need more support.</p>
+</section>
+
+<section class="panel">
+ <div class="panel-title"><span class="icon">⏱️</span><h2>Quest Timeline — 50 Minutes</h2></div>
+ <table><thead><tr><th>Stage</th><th>Time</th></tr></thead><tbody><tr><td>Story & Grammar Review</td><td>5 min</td></tr><tr><td>Mission 1 — Royal Council</td><td>7 min</td></tr><tr><td>Mission 2 — Training Grounds</td><td>8 min</td></tr><tr><td>Mission 3 — Clock Tower</td><td>8 min</td></tr><tr><td>Mission 4 — Citizens</td><td>10 min</td></tr><tr><td>Final Boss — Lord Chronos</td><td>10 min</td></tr><tr><td>Celebration & XP</td><td>2 min</td></tr><tr><th>Total</th><th>50 min</th></tr></tbody></table>
+</section>
+
+<section class="panel">
+ <div class="panel-title"><span class="icon">📚</span><h2>Magic Grammar Scroll</h2></div>
+ <div class="two-col"><div><b>Simple Present</b><p>I / You / We / They</p><p>I play soccer.</p><p>They study English.</p><p><b>He / She / It</b></p><p>He plays soccer.</p><p>She studies English.</p></div><div><b>Adverbs of Frequency</b><p>Always • Usually • Often</p><p>Sometimes • Rarely • Never</p><p><b>Before the main verb:</b></p><p>I always study.</p><p><b>After verb to be:</b></p><p>I am always happy.</p></div></div>
+</section>
+
+<section class="teacher-key">
+ <div class="panel-title"><span class="icon">🔑</span><h2>TEACHER’S KEY — Answer Guide</h2></div>
+ <p class="small">Teacher reference. You may hide this section in the browser before printing for students.</p>
+ <div class="key-grid">
+  <div class="key-card"><h3>Mission 1</h3><b>Challenge 1:</b> 1 study; 2 plays; 3 play; 4 does; 5 eat.<br><b>Challenge 2:</b> 1 He plays basketball. 2 She studies English. 3 They play video games.</div>
+  <div class="key-card"><h3>Mission 2</h3><b>Challenge 1:</b> 1 always; 2 sometimes; 3 never; 4 often; 5 rarely.<br><b>Challenge 2:</b> 1 I always study English. 2 She usually plays volleyball. 3 He never eats fish. 4 We sometimes watch movies.</div>
+  <div class="key-card"><h3>Mission 3</h3><b>Challenge 1:</b> 1 My brother usually gets up at 6:30. 2 I sometimes read books at night. 3 She is always happy. 4 They are often tired.<br><b>Challenge 2:</b> 1 a; 2 b; 3 a; 4 b.</div>
+  <div class="key-card"><h3>Mission 4</h3>Personal answers. Check appropriate adverbs, Simple Present, He/She, correct adverb position and sentence coherence.</div>
+  <div class="key-card"><h3>Final Boss</h3><b>1:</b> plays; studies; watch.<br><b>2:</b> always; sometimes; never.<br><b>3:</b> She is always happy. He never plays soccer.<br><b>4–5:</b> Personal answers; check grammar.</div>
+ </div>
+</section>
+
+<section class="panel">
+ <div class="panel-title"><span class="icon">✅</span><h2>Formative Assessment</h2></div>
+ <ul class="checklist"><li>□ Identify frequency adverbs.</li><li>□ Use Simple Present correctly.</li><li>□ Distinguish main verbs and “to be”.</li><li>□ Place adverbs correctly.</li><li>□ Describe habits and routines.</li><li>□ Produce original sentences.</li><li>□ Communicate with classmates.</li><li>□ Collaborate with the guild.</li></ul>
+</section>
+
+<div class="footer">QUEST COMPLETE • DAILYVILLE IS SAVED!<br><span class="small">THE KINGDOM OF DAILYVILLE — ENGLISH QUEST</span></div>
+</main>
+<script>
+function toggleTeacherKey(){
+ const key=document.querySelector('.teacher-key');
+ key.hidden=!key.hidden;
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ const key=document.querySelector('.teacher-key');
+ key.hidden=false;
+});
+</script>
+</body>
+</html>

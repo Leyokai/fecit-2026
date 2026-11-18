@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worksheet de Língua Inglesa – Simple Present (Daily Routine) – 6º Ano C</title>
+    <style>
+        /* ==========================================================================
+           CONFIGURAÇÃO DE PÁGINA E IMPRESSÃO A4 (AUTOCONTIDO, SEM DEPENDÊNCIAS)
+           ========================================================================== */
+        /* ==========================================================================
+           CONFIGURAÇÃO DE PÁGINA E IMPRESSÃO (PADRÃO OFICIAL A4 — MARGENS DE 10mm)
+           ========================================================================== */
+        @page {
+            size: A4 portrait;
+            margin: 10mm;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10.5pt;
+            line-height: 1.38;
+            color: #000000;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        @media screen {
+            body {
+                background-color: #e5e5e5;
+                padding: 16px 0;
+            }
+            .page-container {
+                width: 210mm;
+                min-height: 297mm;
+                margin: 0 auto;
+                padding: 10mm;
+                background-color: #ffffff;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+            }
+        }
+
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+                margin: 0;
+            }
+            .page-container {
+                width: 100%;
+                min-height: auto;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+            }
+            .page-break {
+                page-break-before: always;
+                break-before: page;
+            }
+        }
+
+        /* ==========================================================================
+           CABEÇALHO INSTITUCIONAL — ESCOLA MUNICIPAL SANTOS DUMONT
+           Estrutura fiel ao modelo oficial (.docx): 6 linhas x 4 colunas de grade
+           Colunas: 15,68% | 44,74% | 23,71% | 15,87%
+           Fonte exclusiva do cabeçalho: Times New Roman
+           ========================================================================== */
+        .header-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            font-family: "Times New Roman", Times, serif;
+            color: #000000;
+            margin-top: 0;
+            margin-bottom: 2.5mm;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .header-table col.col-1 { width: 15.68%; }
+        .header-table col.col-2 { width: 44.74%; }
+        .header-table col.col-3 { width: 23.71%; }
+        .header-table col.col-4 { width: 15.87%; }
+
+        .header-table td {
+            border: 1pt solid #000000;
+            padding: 1.6mm 1.8mm 1.6mm 3.5mm;
+            vertical-align: top;
+            font-size: 11pt;
+            line-height: 1.08;
+        }
+
+        /* Linha 1 e 2, Coluna 1: Logotipo (rowspan=2) */
+        .header-table td.logo-cell {
+            padding: 1mm;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .header-table td.logo-cell img {
+            width: 26.76mm;
+            height: 26.01mm;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+        }
+
+        /* Linha 1, Colunas 2–4: Prefeitura e Escola */
+        .header-table tr.row-inst {
+            height: 16.5mm;
+        }
+
+        .header-table td.inst-cell {
+            text-align: center;
+            vertical-align: middle;
+            padding: 1.6mm 2mm;
+            line-height: 1.15;
+        }
+
+        .inst-cell .prefeitura {
+            display: block;
+            font-size: 12pt;
+            font-weight: bold;
+        }
+
+        .inst-cell .escola {
+            display: block;
+            font-size: 12pt;
+            font-weight: normal;
+        }
+
+        /* Linha 2, Colunas 2–4: Título da Atividade */
+        .header-table tr.row-titulo {
+            height: 11mm;
+        }
+
+        .header-table td.titulo-cell {
+            text-align: center;
+            vertical-align: middle;
+            padding: 1.6mm 2mm;
+            font-size: 12pt;
+            font-weight: bold;
+        }
+
+        /* Linha 3: Aluno / Data / Série-Turma */
+        .header-table tr.row-aluno {
+            height: 6.2mm;
+        }
+
+        .header-table tr.row-aluno td {
+            vertical-align: middle;
+        }
+
+        .header-table td.turma-cell {
+            text-align: center;
+            padding-left: 1.8mm;
+            font-size: 12pt;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        /* Linha 4: Professor / Turno */
+        .header-table tr.row-prof {
+            height: 7.4mm;
+        }
+
+        .header-table td.turno-cell {
+            text-align: center;
+            padding-left: 1.8mm;
+            font-size: 11pt;
+            font-weight: bold;
+        }
+
+        /* Linha 5: Conteúdos / NOTA (rowspan=2) */
+        .header-table tr.row-conteudos {
+            height: 6.0mm;
+        }
+
+        .header-table td.nota-cell {
+            text-align: center;
+            vertical-align: top;
+            padding: 1.8mm;
+            font-size: 11pt;
+            font-weight: normal;
+        }
+
+        /* Linha 6: Instruções */
+        .header-table tr.row-instrucoes {
+            height: 13.6mm;
+        }
+
+        .header-table td.instrucoes-cell {
+            line-height: 1.05;
+        }
+
+        /* ==========================================================================
+           QUADRO DE REFERÊNCIA GRAMATICAL (EXPOSITIVO / CONVENCIONAL)
+           ========================================================================== */
+        .grammar-box {
+            border: 1pt solid #333333;
+            background-color: #f9f9f9;
+            padding: 2.2mm 3mm;
+            margin-bottom: 4mm;
+            font-size: 9.5pt;
+            line-height: 1.3;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .grammar-box-title {
+            font-weight: bold;
+            font-size: 10pt;
+            text-transform: uppercase;
+            margin-bottom: 1.5mm;
+            border-bottom: 0.5pt solid #666666;
+            padding-bottom: 0.8mm;
+        }
+
+        .grammar-grid {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .grammar-grid th,
+        .grammar-grid td {
+            border: 0.5pt solid #888888;
+            padding: 1.2mm 2mm;
+            text-align: left;
+            vertical-align: top;
+            font-size: 9pt;
+        }
+
+        .grammar-grid th {
+            background-color: #eaeaea;
+            font-weight: bold;
+        }
+
+        /* ==========================================================================
+           BLOCOS DE EXERCÍCIOS CONVENCIONAIS
+           ========================================================================== */
+        .exercise-block {
+            margin-bottom: 4.2mm;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .exercise-title {
+            font-size: 10.5pt;
+            font-weight: bold;
+            margin: 0 0 1.2mm 0;
+            padding-bottom: 0.6mm;
+            border-bottom: 1pt solid #222222;
+        }
+
+        .exercise-instruction {
+            font-size: 10pt;
+            margin: 0 0 2mm 0;
+            color: #111111;
+        }
+
+        /* Tabelas de Associação (Exercício 1) */
+        .match-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1mm;
+        }
+
+        .match-table td {
+            padding: 1mm 1.5mm;
+            vertical-align: middle;
+            font-size: 10pt;
+        }
+
+        .match-col-left {
+            width: 46%;
+        }
+
+        .match-col-right {
+            width: 54%;
+        }
+
+        .paren-space {
+            display: inline-block;
+            width: 28px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Texto de Leitura (Exercício 2) */
+        .reading-passage {
+            border: 0.8pt solid #555555;
+            background-color: #fcfcfc;
+            padding: 2.2mm 3mm;
+            margin-bottom: 2mm;
+            font-size: 10pt;
+            line-height: 1.4;
+            text-align: justify;
+        }
+
+        .reading-passage-title {
+            font-weight: bold;
+            margin-bottom: 1mm;
+            text-align: center;
+            font-size: 10.5pt;
+        }
+
+        /* Listas de itens e alternativas */
+        ol.item-list {
+            margin: 0;
+            padding-left: 5.5mm;
+        }
+
+        ol.item-list > li {
+            margin-bottom: 1.8mm;
+            padding-left: 1mm;
+        }
+
+        .mc-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2mm 6mm;
+            margin-top: 0.8mm;
+            font-size: 10pt;
+        }
+
+        .mc-options-vertical {
+            display: block;
+            margin-top: 0.8mm;
+            padding-left: 2mm;
+            font-size: 10pt;
+        }
+
+        .mc-options-vertical div {
+            margin-bottom: 0.6mm;
+        }
+
+        /* Lacunas e Linhas para Resposta Manuscrita */
+        .blank-inline {
+            display: inline-block;
+            border-bottom: 0.8pt solid #000000;
+            min-width: 42mm;
+            height: 4.5mm;
+            vertical-align: baseline;
+        }
+
+        .blank-short {
+            display: inline-block;
+            border-bottom: 0.8pt solid #000000;
+            min-width: 28mm;
+            height: 4.5mm;
+            vertical-align: baseline;
+        }
+
+        .write-line {
+            display: block;
+            width: 100%;
+            border-bottom: 0.8pt solid #333333;
+            height: 6.5mm;
+            margin-top: 1mm;
+            margin-bottom: 1.5mm;
+        }
+
+        .write-line-numbered {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 2.2mm;
+        }
+
+        .write-line-numbered .line-num {
+            font-weight: bold;
+            width: 6mm;
+            flex-shrink: 0;
+        }
+
+        .write-line-numbered .line-rule {
+            flex-grow: 1;
+            border-bottom: 0.8pt solid #333333;
+            height: 6.5mm;
+        }
+
+        /* Banco de palavras tradicional */
+        .word-bank {
+            border: 0.8pt solid #666666;
+            background-color: #f7f7f7;
+            padding: 1.5mm 2.5mm;
+            margin-bottom: 2.5mm;
+            font-size: 9.5pt;
+            text-align: center;
+        }
+
+        .example-note {
+            font-size: 9.5pt;
+            color: #222222;
+            margin-bottom: 2mm;
+            background-color: #f4f4f4;
+            padding: 1.2mm 2.5mm;
+            border-left: 2pt solid #555555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-container">
+
+    <!-- CABEÇALHO INSTITUCIONAL (6 LINHAS x 4 COLUNAS — PADRÃO OFICIAL SANTOS DUMONT) -->
+    <table class="header-table">
+        <colgroup>
+            <col class="col-1">
+            <col class="col-2">
+            <col class="col-3">
+            <col class="col-4">
+        </colgroup>
+        <!-- LINHA 1: Logotipo (rowspan=2) + Prefeitura e Escola (colspan=3) -->
+        <tr class="row-inst">
+            <td class="logo-cell" rowspan="2">
+                <img src="data:image/jpeg;base64,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" alt="Logotipo Escola Municipal Santos Dumont">
+            </td>
+            <td colspan="3" class="inst-cell">
+                <span class="prefeitura">Prefeitura Municipal de Campo Grande, MS</span>
+                <span class="escola">Escola Municipal Santos Dumont</span>
+            </td>
+        </tr>
+
+        <!-- LINHA 2: Título da Atividade (colspan=3) -->
+        <tr class="row-titulo">
+            <td colspan="3" class="titulo-cell">
+                WORKSHEET DE LÍNGUA INGLESA – SIMPLE PRESENT: DAILY ROUTINE
+            </td>
+        </tr>
+
+        <!-- LINHA 3: Aluno (colspan=2) + Data + Turma -->
+        <tr class="row-aluno">
+            <td colspan="2">
+                <strong>Aluno:</strong>
+            </td>
+            <td>
+                <strong>Data:____/____/2026</strong>
+            </td>
+            <td class="turma-cell">
+                6º ANO C
+            </td>
+        </tr>
+
+        <!-- LINHA 4: Professor (colspan=3) + Turno -->
+        <tr class="row-prof">
+            <td colspan="3">
+                <strong>Professor:</strong> Renato Alvarenga
+            </td>
+            <td class="turno-cell">
+                Vespertino
+            </td>
+        </tr>
+
+        <!-- LINHA 5: Conteúdos (colspan=3) + NOTA (rowspan=2) -->
+        <tr class="row-conteudos">
+            <td colspan="3">
+                <strong>Conteúdos:</strong> Simple Present (Rotina Diária); Regras de 3ª pessoa do singular (-s, -es, -ies); Formas afirmativa, negativa e interrogativa.
+            </td>
+            <td class="nota-cell" rowspan="2">
+                NOTA
+            </td>
+        </tr>
+
+        <!-- LINHA 6: Instruções (colspan=3) -->
+        <tr class="row-instrucoes">
+            <td colspan="3" class="instrucoes-cell">
+                <strong>Instruções:</strong> Leia atentamente cada enunciado antes de responder. Resolva os exercícios individualmente utilizando caneta azul ou preta. Você pode consultar suas anotações de vocabulário e gramática no caderno (<em>Help Board</em>).
+            </td>
+        </tr>
+    </table>
+
+    <!-- QUADRO DE APOIO GRAMATICAL (RESUMO EXPOSITIVO TRADICIONAL) -->
+    <div class="grammar-box">
+        <div class="grammar-box-title">Quadro de Apoio Gramatical — Simple Present (Rotina Diária)</div>
+        <table class="grammar-grid">
+            <thead>
+                <tr>
+                    <th style="width: 34%;">Forma Afirmativa (Affirmative)</th>
+                    <th style="width: 33%;">Forma Negativa (Negative)</th>
+                    <th style="width: 33%;">Forma Interrogativa (Interrogative)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        • <strong>I / You / We / They</strong> + verbo na forma base:<br>
+                        <em>Ex.: I <strong>wake up</strong> early. / They <strong>study</strong> English.</em><br>
+                        • <strong>He / She / It</strong> + verbo com <strong>-s, -es</strong> ou <strong>-ies</strong>:<br>
+                        <em>Ex.: He <strong>wakes up</strong> early. / She <strong>goes</strong> to school.</em>
+                    </td>
+                    <td>
+                        • <strong>I / You / We / They</strong> + <strong>don't</strong> + verbo base:<br>
+                        <em>Ex.: They <strong>don't watch</strong> TV in the morning.</em><br>
+                        • <strong>He / She / It</strong> + <strong>doesn't</strong> + verbo base (sem -s):<br>
+                        <em>Ex.: He <strong>doesn't play</strong> soccer at night.</em>
+                    </td>
+                    <td>
+                        • <strong>Do</strong> + I/you/we/they + verbo base?<br>
+                        <em>Ex.: <strong>Do</strong> they <strong>study</strong> in the afternoon?</em><br>
+                        • <strong>Does</strong> + he/she/it + verbo base (sem -s)?<br>
+                        <em>Ex.: <strong>Does</strong> she <strong>have</strong> breakfast at 7:00?</em>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- EXERCÍCIO 1: VOCABULÁRIO E ASSOCIAÇÃO -->
+    <div class="exercise-block">
+        <div class="exercise-title">1. Vocabulário — Expressões de Rotina Diária (Daily Routine)</div>
+        <p class="exercise-instruction">Relacione as expressões de rotina diária em inglês (Coluna A) aos seus respectivos significados em português (Coluna B), escrevendo a letra correspondente dentro dos parênteses:</p>
+        <table class="match-table">
+            <tr>
+                <td class="match-col-left"><strong>( A )</strong> wake up early</td>
+                <td class="match-col-right"><span class="paren-space">( &nbsp; )</span> ir para a escola</td>
+            </tr>
+            <tr>
+                <td class="match-col-left"><strong>( B )</strong> brush the teeth</td>
+                <td class="match-col-right"><span class="paren-space">( &nbsp; )</span> fazer a tarefa de casa</td>
+            </tr>
+            <tr>
+                <td class="match-col-left"><strong>( C )</strong> have breakfast</td>
+                <td class="match-col-right"><span class="paren-space">( &nbsp; )</span> acordar cedo</td>
+            </tr>
+            <tr>
+                <td class="match-col-left"><strong>( D )</strong> go to school</td>
+                <td class="match-col-right"><span class="paren-space">( &nbsp; )</span> escovar os dentes</td>
+            </tr>
+            <tr>
+                <td class="match-col-left"><strong>( E )</strong> have lunch</td>
+                <td class="match-col-right"><span class="paren-space">( &nbsp; )</span> ir para a cama / dormir</td>
+            </tr>
+            <tr>
+                <td class="match-col-left"><strong>( F )</strong> do homework</td>
+                <td class="match-col-right"><span class="paren-space">( &nbsp; )</span> tomar o café da manhã</td>
+            </tr>
+            <tr>
+                <td class="match-col-left"><strong>( G )</strong> watch TV</td>
+                <td class="match-col-right"><span class="paren-space">( &nbsp; )</span> almoçar</td>
+            </tr>
+            <tr>
+                <td class="match-col-left"><strong>( H )</strong> go to bed</td>
+                <td class="match-col-right"><span class="paren-space">( &nbsp; )</span> assistir televisão</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- EXERCÍCIO 2: COMPREENSÃO DE TEXTO -->
+    <div class="exercise-block">
+        <div class="exercise-title">2. Compreensão de Texto (Reading Comprehension)</div>
+        <p class="exercise-instruction">Leia o texto abaixo sobre a rotina diária de Lucas e sua família e, em seguida, responda às questões de acordo com as informações lidas:</p>
+        <div class="reading-passage">
+            <div class="reading-passage-title">Lucas's Daily Routine</div>
+            Lucas is a sixth-grade student in Campo Grande. Every weekday, he wakes up at 6:30 in the morning, brushes his teeth, and has breakfast with his family. His sister, Marina, studies in the morning, so she goes to school at 7:00. Lucas doesn't go to school in the morning; he studies in the afternoon. Before school, he does his homework and helps his mother at home. At 11:30, Lucas and his family have lunch together. In the afternoon, he goes to school and studies English and other subjects with his classmates. At night, Lucas and Marina watch TV and go to bed at 9:30.
+        </div>
+        <ol class="item-list" type="a">
+            <li>
+                De acordo com o texto, a que horas Lucas acorda durante a semana?<br>
+                <div class="mc-options">
+                    <span>( &nbsp; ) At 6:30 in the morning.</span>
+                    <span>( &nbsp; ) At 7:00 in the morning.</span>
+                    <span>( &nbsp; ) At 9:30 at night.</span>
+                    <span>( &nbsp; ) At 11:30 in the morning.</span>
+                </div>
+            </li>
+            <li>
+                Em qual período do dia Lucas vai para a escola e estuda com seus colegas?<br>
+                <div class="mc-options">
+                    <span>( &nbsp; ) In the morning (de manhã).</span>
+                    <span>( &nbsp; ) In the afternoon (à tarde).</span>
+                    <span>( &nbsp; ) At night (à noite).</span>
+                    <span>( &nbsp; ) On weekends (nos fins de semana).</span>
+                </div>
+            </li>
+            <li>
+                O que Lucas faz <strong>antes</strong> de ir para a escola? Assinale a opção correta:<br>
+                <div class="mc-options">
+                    <span>( &nbsp; ) Ele assiste TV e dorme.</span>
+                    <span>( &nbsp; ) Ele joga futebol no parque.</span>
+                    <span>( &nbsp; ) Ele faz a tarefa de casa e ajuda a mãe.</span>
+                    <span>( &nbsp; ) Ele vai para a escola às 7h com Marina.</span>
+                </div>
+            </li>
+            <li>
+                No trecho <em>"At night, Lucas and Marina watch TV"</em>, o verbo <strong>watch</strong> não recebe a terminação <strong>-es</strong> porque:<br>
+                <div class="mc-options">
+                    <span>( &nbsp; ) O sujeito equivale a <em>He</em> (singular).</span>
+                    <span>( &nbsp; ) O sujeito é composto (<em>Lucas and Marina = They</em>, plural).</span>
+                    <span>( &nbsp; ) A frase está na forma negativa.</span>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+    <!-- QUEBRA DE PÁGINA CONTROLADA PARA A PÁGINA 2 -->
+    <div class="page-break"></div>
+
+    <!-- EXERCÍCIO 3: FIXAÇÃO GRAMATICAL — COMPLEMENTAÇÃO DE FRASES -->
+    <div class="exercise-block">
+        <div class="exercise-title">3. Fixação Gramatical — Forma Afirmativa do Simple Present</div>
+        <p class="exercise-instruction">Complete as frases abaixo utilizando a forma correta do verbo indicado entre parênteses no <em>Simple Present</em>. Observe com atenção se o sujeito exige a forma base ou a flexão de 3ª pessoa do singular (<strong>He / She / It</strong>):</p>
+        <ol class="item-list" type="a">
+            <li>I <span class="blank-short"></span> early every day from Monday to Friday. <strong>(wake up / wakes up)</strong></li>
+            <li>Marina <span class="blank-short"></span> her teeth after breakfast. <strong>(brush / brushes)</strong></li>
+            <li>Lucas <span class="blank-short"></span> his English homework in the morning. <strong>(do / does)</strong></li>
+            <li>We <span class="blank-short"></span> lunch at home before afternoon classes. <strong>(have / has)</strong></li>
+            <li>My brother <span class="blank-short"></span> soccer with his friends on Thursdays. <strong>(play / plays)</strong></li>
+            <li>The students <span class="blank-short"></span> English in the classroom every Tuesday. <strong>(study / studies)</strong></li>
+        </ol>
+    </div>
+
+    <!-- EXERCÍCIO 4: IDENTIFICAÇÃO DE ESTRUTURAS LINGUÍSTICAS -->
+    <div class="exercise-block">
+        <div class="exercise-title">4. Identificação de Estruturas Gramaticais (Formas Afirmativa, Negativa e Interrogativa)</div>
+        <p class="exercise-instruction">Assinale a única alternativa gramaticalmente correta em cada item, aplicando as regras do <em>Simple Present</em>:</p>
+        <ol class="item-list" type="a">
+            <li>
+                Para dizer em inglês que <em>"Pedro não vai para a escola de manhã"</em> (sujeito = <em>He</em>), a frase correta na forma negativa é:
+                <div class="mc-options-vertical">
+                    <div>( &nbsp; ) Pedro don't go to school in the morning.</div>
+                    <div>( &nbsp; ) Pedro doesn't goes to school in the morning.</div>
+                    <div>( &nbsp; ) Pedro doesn't go to school in the morning.</div>
+                    <div>( &nbsp; ) Pedro not go to school in the morning.</div>
+                </div>
+            </li>
+            <li>
+                Qual alternativa apresenta a forma correta de perguntar <em>"Os alunos estudam inglês na terça-feira?"</em> (sujeito = <em>They</em>)?
+                <div class="mc-options-vertical">
+                    <div>( &nbsp; ) Does the students study English on Tuesday?</div>
+                    <div>( &nbsp; ) Do the students studies English on Tuesday?</div>
+                    <div>( &nbsp; ) Are the students study English on Tuesday?</div>
+                    <div>( &nbsp; ) Do the students study English on Tuesday?</div>
+                </div>
+            </li>
+            <li>
+                Complete corretamente a pergunta na 3ª pessoa do singular: <em>"________ Ana ________ up at six o'clock?"</em>
+                <div class="mc-options">
+                    <span>( &nbsp; ) Do / wake</span>
+                    <span>( &nbsp; ) Does / wake</span>
+                    <span>( &nbsp; ) Does / wakes</span>
+                    <span>( &nbsp; ) Is / waking</span>
+                </div>
+            </li>
+            <li>
+                Compare as frases: <em>"He collects the notebooks."</em> e <em>"They collect the notebooks."</em> Qual é a explicação correta para a diferença no verbo?
+                <div class="mc-options-vertical">
+                    <div>( &nbsp; ) Com <em>He, She, It</em> no Simple Present afirmativo, acrescenta-se <strong>-s</strong> ao verbo; com <em>I, You, We, They</em>, o verbo permanece na forma base.</div>
+                    <div>( &nbsp; ) O verbo recebe <strong>-s</strong> apenas quando o sujeito está no plural.</div>
+                    <div>( &nbsp; ) A primeira frase está no passado e a segunda frase está no presente.</div>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+    <!-- EXERCÍCIO 5: TRANSFORMAÇÃO DE FRASES E TRADUÇÃO -->
+    <div class="exercise-block">
+        <div class="exercise-title">5. Transformação de Frases e Tradução</div>
+        <p class="exercise-instruction">Siga a instrução específica de cada item abaixo para reescrever ou traduzir as frases sobre rotina diária:</p>
+        <ol class="item-list" type="a">
+            <li>
+                Reescreva a frase na <strong>forma negativa</strong> (use <em>doesn't</em> + verbo na forma base):<br>
+                <em>Frase afirmativa:</em> She watches TV in the morning.<br>
+                <em>Forma negativa:</em> <span class="write-line"></span>
+            </li>
+            <li>
+                Reescreva a frase na <strong>forma interrogativa</strong> (inicie com <em>Do</em>):<br>
+                <em>Frase afirmativa:</em> They have breakfast at seven o'clock.<br>
+                <em>Forma interrogativa:</em> <span class="write-line"></span>
+            </li>
+            <li>
+                Traduza a seguinte frase do inglês para o <strong>português</strong>:<br>
+                <em>"Lucas wakes up early and goes to school in the afternoon."</em><br>
+                <em>Tradução:</em> <span class="write-line"></span>
+            </li>
+            <li>
+                Escreva a seguinte frase em <strong>inglês</strong> utilizando o <em>Simple Present</em>:<br>
+                <em>"Eu estudo inglês e faço a tarefa de casa."</em><br>
+                <em>Em inglês:</em> <span class="write-line"></span>
+            </li>
+        </ol>
+    </div>
+
+    <!-- EXERCÍCIO 6: PRODUÇÃO ESCRITA -->
+    <div class="exercise-block">
+        <div class="exercise-title">6. Produção Escrita — Minha Rotina Diária (My Daily Routine)</div>
+        <p class="exercise-instruction">Escreva <strong>4 (quatro) frases completas em inglês</strong> descrevendo atividades da sua própria rotina diária (com <strong>I</strong>) e/ou da rotina de um familiar ou colega (com <strong>He / She / My mother / My brother / My friend</strong>). Utilize o banco de palavras abaixo como apoio:</p>
+        <div class="word-bank">
+            <strong>Banco de Apoio:</strong> wake up • brush my teeth • take a shower • have breakfast • have lunch • go to school • study English • do homework • play soccer • watch TV • go to bed • in the morning • in the afternoon • at night • every day
+        </div>
+        <div class="example-note">
+            <strong>Exemplos:</strong> <em>I wake up at 6:30 in the morning. / I go to school in the afternoon. / My sister studies in the morning.</em>
+        </div>
+        <div class="write-line-numbered">
+            <span class="line-num">1.</span>
+            <span class="line-rule"></span>
+        </div>
+        <div class="write-line-numbered">
+            <span class="line-num">2.</span>
+            <span class="line-rule"></span>
+        </div>
+        <div class="write-line-numbered">
+            <span class="line-num">3.</span>
+            <span class="line-rule"></span>
+        </div>
+        <div class="write-line-numbered">
+            <span class="line-num">4.</span>
+            <span class="line-rule"></span>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

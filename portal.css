@@ -1,0 +1,784 @@
+/* ==========================================================================
+   PORTAL DIÁRIO DE BORDO | V FECIT/REME 2026
+   Identidade: Julia Barbosa Rodrigues
+   Estilo: Educacional, Acadêmico, Moderno e Responsivo
+   ========================================================================== */
+
+:root {
+  --primary: #1e3a8a;          /* Azul institucional profundo */
+  --primary-dark: #0f172a;     /* Tom escuro de base */
+  --primary-light: #3b82f6;    /* Azul vibrante para foco e realce */
+  --accent-manual: #0284c7;    /* Azul cerúleo para o Manual */
+  --accent-manual-light: #e0f2fe;
+  --accent-guia: #4f46e5;      /* Índigo para o Guia FECIT */
+  --accent-guia-light: #ede9fe;
+  --accent-acervo: #059669;    /* Esmeralda para o Acervo Digital */
+  --accent-acervo-light: #d1fae5;
+  --fecit-gold: #f59e0b;       /* Dourado institucional */
+  --fecit-gold-light: #fef3c7;
+  
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --border-hover: #cbd5e1;
+  
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-subtle: #64748b;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 20px 25px -5px rgba(30, 58, 138, 0.12), 0 8px 10px -6px rgba(30, 58, 138, 0.08);
+  
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   TOPBAR INSTITUCIONAL
+   ========================================================================== */
+.topbar {
+  background: #0b132b;
+  color: #94a3b8;
+  padding: 8px 20px;
+  font-size: 0.8rem;
+  letter-spacing: 0.4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.topbar-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.topbar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.topbar-badge::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+
+/* ==========================================================================
+   HERO HEADER
+   ========================================================================== */
+.header-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 65%, #1d4ed8 100%);
+  color: #ffffff;
+  padding: 44px 24px 48px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.header-hero::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -100px;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.header-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: 10%;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.header-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.header-text-col {
+  flex: 1;
+  min-width: 280px;
+}
+
+.fecit-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  color: #fde68a;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-size: 2.15rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: #93c5fd;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.hero-description {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+.header-actions-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.install-app-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.28);
+  transition: var(--transition);
+}
+
+.install-app-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.35);
+}
+
+.install-app-btn.installed {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+}
+
+.install-hint {
+  font-size: 0.76rem;
+  color: #bfdbfe;
+}
+
+/* ==========================================================================
+   MAIN CONTAINER
+   ========================================================================== */
+.main-wrapper {
+  max-width: 1140px;
+  margin: -24px auto 0;
+  padding: 0 20px 48px;
+  flex: 1;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+/* Welcome Info Card */
+.welcome-banner {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.welcome-icon {
+  background: #eff6ff;
+  color: #2563eb;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.welcome-content h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.welcome-content p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   CARDS DE ACESSO
+   ========================================================================== */
+.section-heading {
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-heading p {
+  font-size: 0.88rem;
+  color: var(--text-subtle);
+  margin-top: 2px;
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 22px;
+  margin-bottom: 26px;
+}
+
+/* Card Base */
+.portal-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  position: relative;
+}
+
+.portal-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-hover);
+}
+
+.portal-card:focus-visible {
+  outline: 3px solid var(--primary-light);
+  outline-offset: 4px;
+}
+
+/* Card Visual Header */
+.card-banner {
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #ffffff;
+  position: relative;
+}
+
+.card-banner.manual-theme {
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+}
+
+.card-banner.guia-theme {
+  background: linear-gradient(135deg, #3730a3 0%, #4f46e5 100%);
+}
+
+.card-banner.acervo-theme {
+  background: linear-gradient(135deg, #065f46 0%, #059669 100%);
+}
+
+.card-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+.card-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 3px 8px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.card-header-titles h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+/* Card Body */
+.card-content {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+/* Feature List Inside Card */
+.card-features {
+  list-style: none;
+  margin-bottom: 22px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-features li {
+  font-size: 0.84rem;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature-check {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.manual-theme-check {
+  background: var(--accent-manual-light);
+  color: var(--accent-manual);
+}
+
+.guia-theme-check {
+  background: var(--accent-guia-light);
+  color: var(--accent-guia);
+}
+
+.acervo-theme-check {
+  background: var(--accent-acervo-light);
+  color: var(--accent-acervo);
+}
+
+/* Card Action Button Area */
+.card-action {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.manual-link-text {
+  color: var(--accent-manual);
+}
+
+.guia-link-text {
+  color: var(--accent-guia);
+}
+
+.acervo-link-text {
+  color: var(--accent-acervo);
+}
+
+.arrow-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.manual-arrow {
+  background: var(--accent-manual-light);
+  color: var(--accent-manual);
+}
+
+.guia-arrow {
+  background: var(--accent-guia-light);
+  color: var(--accent-guia);
+}
+
+.acervo-arrow {
+  background: var(--accent-acervo-light);
+  color: var(--accent-acervo);
+}
+
+.portal-card:hover .arrow-circle {
+  transform: translateX(4px);
+}
+
+.portal-card:hover .manual-arrow {
+  background: var(--accent-manual);
+  color: #ffffff;
+}
+
+.portal-card:hover .guia-arrow {
+  background: var(--accent-guia);
+  color: #ffffff;
+}
+
+.portal-card:hover .acervo-arrow {
+  background: var(--accent-acervo);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   ACESSO RÁPIDO ÀS CATEGORIAS DO ACERVO
+   ========================================================================== */
+.quick-acervo-strip {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent-acervo);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 28px;
+}
+
+.quick-acervo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.quick-acervo-header h3 {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.quick-acervo-header span {
+  font-size: 0.8rem;
+  color: var(--text-subtle);
+}
+
+.quick-acervo-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.quick-cat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 0.83rem;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.quick-cat-pill:hover {
+  background: var(--accent-acervo-light);
+  border-color: var(--accent-acervo);
+  color: #065f46;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   METADATA CARD (INSTITUCIONAL & PROJETO)
+   ========================================================================== */
+.info-strip {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.info-strip-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 14px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--primary);
+}
+
+.info-strip-header h2 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: 0.2px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+.info-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 3px solid var(--primary);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-col-primary {
+  grid-column: span 2;
+}
+
+.info-col-secondary {
+  grid-column: span 3;
+  border-left-color: var(--accent-manual);
+}
+
+.info-label {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-subtle);
+  font-weight: 700;
+}
+
+.info-value {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   MODAL DE INSTALAÇÃO PWA
+   ========================================================================== */
+.install-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 990;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(4px);
+  padding: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.install-modal-overlay.open {
+  display: flex;
+}
+
+.install-modal-card {
+  background: #ffffff;
+  border-radius: 18px;
+  max-width: 520px;
+  width: 100%;
+  padding: 24px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3);
+}
+
+.install-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.install-modal-head h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.install-modal-close {
+  border: none;
+  background: #f1f5f9;
+  color: var(--text-main);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.install-step-box {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+.install-step-box strong {
+  color: var(--text-main);
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.portal-footer {
+  background: #0f172a;
+  color: #94a3b8;
+  padding: 32px 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-copy {
+  color: #cbd5e1;
+}
+
+.footer-badge {
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE REFINADA
+   ========================================================================== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.65rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+  
+  .header-hero {
+    padding: 34px 16px 38px;
+  }
+  
+  .main-wrapper {
+    margin-top: -16px;
+    padding: 0 16px 36px;
+  }
+  
+  .portal-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .info-col-primary,
+  .info-col-secondary {
+    grid-column: span 1;
+  }
+}
