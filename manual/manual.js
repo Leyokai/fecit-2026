@@ -51,23 +51,23 @@
 
     function saveProgress() {
       const checks = {};
-      for (let i = 1; i <= 12; i++) {
+      for (let i = 1; i <= 8; i++) {
         const chk = document.getElementById(`check-${i}`);
         if (chk) {
           checks[`check-${i}`] = chk.checked;
         }
       }
       try {
-        localStorage.setItem("fecit_diario_progress_v2", JSON.stringify(checks));
+        localStorage.setItem("fecit_diario_progress_v4", JSON.stringify(checks));
       } catch (e) {}
     }
 
     function loadProgress() {
       try {
-        const raw = localStorage.getItem("fecit_diario_progress_v2");
+        const raw = localStorage.getItem("fecit_diario_progress_v4");
         if (raw) {
           const checks = JSON.parse(raw);
-          for (let i = 1; i <= 12; i++) {
+          for (let i = 1; i <= 8; i++) {
             const chk = document.getElementById(`check-${i}`);
             if (chk && checks[`check-${i}`]) {
               chk.checked = true;
@@ -82,13 +82,13 @@
 
     function updateProgressUI() {
       let count = 0;
-      for (let i = 1; i <= 12; i++) {
+      for (let i = 1; i <= 8; i++) {
         const chk = document.getElementById(`check-${i}`);
         if (chk && chk.checked) count++;
       }
-      const pct = Math.round((count / 12) * 100);
+      const pct = Math.round((count / 8) * 100);
       document.getElementById("progressFill").style.width = pct + "%";
-      document.getElementById("progressSummary").innerText = `${count} de 12 registros (${pct}%)`;
+      document.getElementById("progressSummary").innerText = `${count} de 8 registros (${pct}%)`;
     }
 
     // Initialize on load

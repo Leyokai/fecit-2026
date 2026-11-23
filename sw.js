@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fecit-portal-v3-app-live';
+const CACHE_NAME = 'fecit-portal-v3-8entradas-live';
 
 const CORE_ASSETS = [
   './',

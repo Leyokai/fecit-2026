@@ -29,7 +29,7 @@ Este repositório é um **Progressive Web App (PWA)** com CSS/JS 100% embutidos 
    - Missões 1 a 8 (Projeto em 60s, Cronograma, Análise Documental com links diretos para o Acervo, Diário de Bordo, Tabela Comparativa interativa, Mapa do Banner Oficial, Simulador da Banca Avaliadora e Checklist Final);
    - Galeria embutida das evidências principais e anexo institucional da REME recolhido em `<details>`.
 3. **Manual do Diário de Bordo (`manual/index.html`):**
-   - Regras oficiais do caderno brochura físico, página de rosto/identificação, sumário e modelos prontos das **12 entradas obrigatórias** com cópia com 1 clique e progresso salvo em `LocalStorage`.
+   - Regras oficiais do caderno brochura físico, página de rosto/identificação, sumário e modelos prontos das **8 entradas obrigatórias** (7 burocráticas/metodológicas e 1 de observação prática) com cópia com 1 clique e progresso salvo em `LocalStorage`.
 4. **Acervo Digital & Evidências (`acervo/index.html`):**
    - Biblioteca pesquisável com leitor interno para leitura no próprio app (`.docx`, `.md`, texto extraído de `.pdf`, `.html` e imagens) e galeria lightbox em tela cheia para as **35 fotos** da pesquisa.
 
