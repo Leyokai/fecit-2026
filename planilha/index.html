@@ -364,7 +364,7 @@
 
     .act-cards-row {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 10px;
     }
 
@@ -813,7 +813,7 @@
         </div>
         <h1 class="app-title">Planilha de Acompanhamento e Comparação de Desempenho — Língua Inglesa</h1>
         <p class="app-subtitle">
-          Instrumento de sistematização documental e quantitativa (Agosto a Outubro de 2026): comparação entre <strong>3 Atividades Tradicionais</strong> e <strong>3 Atividades Gamificadas (Fases RPG &amp; Boss Levels)</strong>, articuladas com <strong>Pré-Teste e Pós-Teste Pedagógicos</strong>.
+          Instrumento de sistematização documental e quantitativa (Corpus do Acervo Digital 2026): comparação entre <strong>2 Atividades Tradicionais</strong> e <strong>2 Atividades Gamificadas (Fases RPG &amp; Boss Levels)</strong>, articuladas com <strong>Pré-Teste e Pós-Teste Pedagógicos</strong>.
         </p>
       </div>
       <div class="toolbar-actions">
@@ -862,10 +862,10 @@
           </div>
 
           <div class="method-box model-note">
-            <h3 style="color: var(--warn-amber);">2. Critérios Pedagógicos Adotados (Modelo Editável)</h3>
+            <h3 style="color: var(--warn-amber);">2. Critérios Pedagógicos Adotados (Modelo Editável 2×2)</h3>
             <p style="margin-bottom: 4px;">Como a seção de metodologia não fixa escalas numéricas fechadas, este instrumento adota uma <strong>solução pedagógica padronizada e 100% editável</strong>:</p>
             <ul>
-              <li><strong>Escala de Notas (0,0 a 10,0):</strong> Cada atividade (T1 a T3 e G1 a G3), bem como o Pré-teste e o Pós-teste, utiliza escala de 0 a 10 pontos (editável no seletor de escala).</li>
+              <li><strong>Escala de Notas (0,0 a 10,0):</strong> Cada atividade (T1, T2 e G1, G2), bem como o Pré-teste e o Pós-teste, utiliza escala de 0 a 10 pontos (soma de 0 a 20 pontos por grupo).</li>
               <li><strong>Rubrica por Atividade:</strong> Avalia a aplicação prática de <em>Vocabulário e Estruturas Gramaticais</em> somada à completude dos registros em <em>Worksheets</em>/cadernos.</li>
               <li><strong>Indicador de Engajamento Documental (1 a 3):</strong> Registro qualitativo-quantitativo observado nos materiais: <strong>1 = Baixo/Incompleto</strong>, <strong>2 = Regular/Parcial</strong>, <strong>3 = Alto/Completo</strong>.</li>
             </ul>
@@ -875,7 +875,7 @@
             <h3 style="color: #1d4ed8;">3. Como Substituir os Dados Fictícios pelos Dados Reais</h3>
             <ul>
               <li><strong>Edição Direta na Tabela:</strong> Clique sobre qualquer código (ex.: <em>Aluno 01</em>), nota ou nível de engajamento na tabela abaixo para digitar os valores reais. Todos os totais, médias e diferenciais são recalculados instantaneamente.</li>
-              <li><strong>Personalização das 6 Atividades:</strong> Edite os títulos, tipos de documento (<em>Worksheet</em>, Caderno, Avaliativa) e foco linguístico das atividades T1–T3 e G1–G3 no painel logo abaixo.</li>
+              <li><strong>Personalização das 4 Atividades:</strong> Edite os títulos, arquivos-fonte do acervo e foco linguístico das atividades T1, T2 e G1, G2 no painel logo abaixo.</li>
               <li><strong>Preenchimento do Zero ou via Excel:</strong> Clique em <strong>"Limpar Notas"</strong> no topo para deixar a planilha pronta para digitação real, ou use <strong>"Colar Dados em Lote"</strong> para colar colunas diretamente do Excel/Google Planilhas.</li>
             </ul>
           </div>
@@ -886,19 +886,19 @@
     <!-- SEÇÃO 2: INDICADORES GERAIS E COMPARATIVOS DA TURMA (N = 29) -->
     <section class="kpi-grid">
       <div class="kpi-card kpi-trad">
-        <span class="kpi-label">Práticas Tradicionais (T1, T2, T3)</span>
+        <span class="kpi-label">Práticas Tradicionais (T1, T2)</span>
         <div class="kpi-value" id="kpi-trad-avg">0,00</div>
         <div class="kpi-sub">
-          Total acumulado da turma: <strong id="kpi-trad-sum">0,0</strong> pts<br>
+          Total acumulado da turma: <strong id="kpi-trad-sum">0,0</strong> pts (0–20/aluno)<br>
           Engajamento médio: <strong id="kpi-trad-eng">0,00</strong> / 3,00
         </div>
       </div>
 
       <div class="kpi-card kpi-gam">
-        <span class="kpi-label">Atividades Gamificadas / RPG (G1, G2, G3)</span>
+        <span class="kpi-label">Atividades Gamificadas / RPG (G1, G2)</span>
         <div class="kpi-value" id="kpi-gam-avg">0,00</div>
         <div class="kpi-sub">
-          Total acumulado da turma: <strong id="kpi-gam-sum">0,0</strong> pts<br>
+          Total acumulado da turma: <strong id="kpi-gam-sum">0,0</strong> pts (0–20/aluno)<br>
           Engajamento médio: <strong id="kpi-gam-eng">0,00</strong> / 3,00
         </div>
       </div>
@@ -931,21 +931,21 @@
       </div>
     </section>
 
-    <!-- SEÇÃO 3: ESTRUTURA DAS 6 ATIVIDADES (3 TRADICIONAIS vs. 3 GAMIFICADAS) -->
+    <!-- SEÇÃO 3: ESTRUTURA DAS 4 ATIVIDADES (2 TRADICIONAIS vs. 2 GAMIFICADAS) -->
     <section class="card">
       <div class="card-header">
         <div class="card-title">
-          <span>🗂 Estrutura das 6 Atividades Analisadas (Campos Editáveis — Modelo Pedagógico)</span>
+          <span>🗂 Estrutura das 4 Atividades Analisadas (Corpus Real do Acervo Digital — Modelo 2×2)</span>
         </div>
-        <span style="font-size: 12px; color: var(--text-muted);">Altere os títulos ou instrumentos abaixo conforme o corpus documental selecionado entre ago.–out./2026</span>
+        <span style="font-size: 12px; color: var(--text-muted);">Instrumentos reais de 04_atividades_e_materiais/ • Títulos e metadados editáveis</span>
       </div>
       <div class="card-body">
         <div class="activities-grid">
           <!-- Bloco Tradicional -->
           <div class="act-group trad">
             <div class="act-group-header">
-              <span class="act-group-title">📘 Grupo A: 3 Atividades Tradicionais (Práticas Convencionais)</span>
-              <span class="act-tag trad">Expositivo / Exercícios Padrão</span>
+              <span class="act-group-title">📘 Grupo A: 2 Atividades Tradicionais (Práticas Convencionais)</span>
+              <span class="act-tag trad">Avaliativa Formal &amp; Worksheet</span>
             </div>
             <div class="act-cards-row" id="trad-act-config"></div>
           </div>
@@ -953,7 +953,7 @@
           <!-- Bloco Gamificado -->
           <div class="act-group gam">
             <div class="act-group-header">
-              <span class="act-group-title">🎲 Grupo B: 3 Atividades Gamificadas (Temática RPG, Fases &amp; Boss Levels)</span>
+              <span class="act-group-title">🎲 Grupo B: 2 Atividades Gamificadas (Temática RPG, Fases &amp; Boss Levels)</span>
               <span class="act-tag gam">Metodologia Ativa / RPG</span>
             </div>
             <div class="act-cards-row" id="gam-act-config"></div>
@@ -973,11 +973,11 @@
       <div class="card-body">
         <div class="charts-grid">
           <div>
-            <h4 style="font-size: 13px; margin-bottom: 10px; color: var(--text-muted); text-transform: uppercase;">Média da Turma nas 6 Atividades e nos Testes Pedagógicos (0 a 10)</h4>
+            <h4 style="font-size: 13px; margin-bottom: 10px; color: var(--text-muted); text-transform: uppercase;">Média da Turma nas 4 Atividades e nos Testes Pedagógicos (0 a 10)</h4>
             <div class="bar-chart-list" id="activity-bars-container"></div>
           </div>
           <div>
-            <h4 style="font-size: 13px; margin-bottom: 10px; color: var(--text-muted); text-transform: uppercase;">Indicadores de Aplicação Prática (Gramática, Vocabulário e Registros)</h4>
+            <h4 style="font-size: 13px; margin-bottom: 10px; color: var(--text-muted); text-transform: uppercase;">Comparativo Direto por Par Metodológico (Vocabulário, Gramática e Engajamento)</h4>
             <div class="bar-chart-list" id="criteria-bars-container"></div>
           </div>
         </div>
@@ -1003,7 +1003,7 @@
             <span style="font-size: 12px; font-weight: 600; color: var(--text-muted);">Visualização:</span>
             <div class="view-tabs">
               <button class="view-tab active" id="tab-all" onclick="setViewMode('all')">Completa</button>
-              <button class="view-tab" id="tab-activities" onclick="setViewMode('activities')">Foco 6 Atividades</button>
+              <button class="view-tab" id="tab-activities" onclick="setViewMode('activities')">Foco 4 Atividades</button>
               <button class="view-tab" id="tab-summary" onclick="setViewMode('summary')">Resumo Comparativo</button>
             </div>
           </div>
@@ -1018,10 +1018,10 @@
               <th rowspan="3" class="sticky-col-2 th-student">Identificação Genérica<br><span style="font-weight:400;font-size:11px;">(Clique para editar)</span></th>
               
               <!-- Grupo Tradicional -->
-              <th colspan="6" class="th-trad col-group-act">ATIVIDADES TRADICIONAIS (Práticas Convencionais)</th>
+              <th colspan="5" class="th-trad col-group-act">ATIVIDADES TRADICIONAIS (Práticas Convencionais)</th>
               
               <!-- Grupo Gamificado -->
-              <th colspan="6" class="th-gam col-group-act">ATIVIDADES GAMIFICADAS (Temática RPG: Fases &amp; Boss Levels)</th>
+              <th colspan="5" class="th-gam col-group-act">ATIVIDADES GAMIFICADAS (Temática RPG: Fases &amp; Boss Levels)</th>
               
               <!-- Testes e Rubrica -->
               <th colspan="3" class="th-eval col-group-eval">PRÉ E PÓS-TESTE PEDAGÓGICOS</th>
@@ -1033,15 +1033,13 @@
               <!-- Subcabeçalhos Tradicionais -->
               <th class="th-TradSub col-act" id="th-t1">T1</th>
               <th class="th-TradSub col-act" id="th-t2">T2</th>
-              <th class="th-TradSub col-act" id="th-t3">T3</th>
               <th class="th-TradSub col-act">Engaj. T</th>
               <th class="th-TradSub">Total T</th>
               <th class="th-TradSub" style="border-right: 2px solid #7dd3fc;">Média T</th>
 
               <!-- Subcabeçalhos Gamificados -->
-              <th class="th-GamSub col-act" id="th-g1">G1 (Fase 1)</th>
-              <th class="th-GamSub col-act" id="th-g2">G2 (Fase 2)</th>
-              <th class="th-GamSub col-act" id="th-g3">G3 (Boss)</th>
+              <th class="th-GamSub col-act" id="th-g1">G1 (Memory Eater)</th>
+              <th class="th-GamSub col-act" id="th-g2">G2 (Dailyville)</th>
               <th class="th-GamSub col-act">Engaj. G</th>
               <th class="th-GamSub">Total G</th>
               <th class="th-GamSub" style="border-right: 2px solid #c4b5fd;">Média G</th>
@@ -1053,22 +1051,20 @@
 
               <!-- Subcabeçalhos Comparativos -->
               <th class="th-comp">Diferencial<br>(Média G − T)</th>
-              <th class="th-comp">Média Geral<br>(6 Ativ.)</th>
+              <th class="th-comp">Média Geral<br>(4 Ativ.)</th>
               <th class="th-comp" style="min-width: 190px;">Aplicação Gramática/Vocab.<br>&amp; Evidência Documental</th>
             </tr>
             <tr>
               <th class="th-TradSub col-act">0–10</th>
               <th class="th-TradSub col-act">0–10</th>
-              <th class="th-TradSub col-act">0–10</th>
               <th class="th-TradSub col-act">Nível 1–3</th>
-              <th class="th-TradSub">0–30</th>
+              <th class="th-TradSub">0–20</th>
               <th class="th-TradSub" style="border-right: 2px solid #7dd3fc;">0–10</th>
 
               <th class="th-GamSub col-act">0–10</th>
               <th class="th-GamSub col-act">0–10</th>
-              <th class="th-GamSub col-act">0–10</th>
               <th class="th-GamSub col-act">Nível 1–3</th>
-              <th class="th-GamSub">0–30</th>
+              <th class="th-GamSub">0–20</th>
               <th class="th-GamSub" style="border-right: 2px solid #c4b5fd;">0–10</th>
 
               <th class="th-EvalSub col-eval">0–10</th>
@@ -1098,9 +1094,9 @@
       <div class="modal-body">
         <p style="font-size: 12.5px; color: var(--text-muted);">
           Cole abaixo até 29 linhas (separadas por <strong>Tabulação</strong> do Excel/Planilhas ou por <strong>ponto e vírgula <code>;</code></strong>) na seguinte ordem de colunas:<br>
-          <code>Identificação; T1; T2; T3; Engaj_T(1-3); G1; G2; G3; Engaj_G(1-3); Pré-Teste; Pós-Teste; Observação</code>
+          <code>Identificação; T1; T2; Engaj_T(1-3); G1; G2; Engaj_G(1-3); Pré-Teste; Pós-Teste; Observação</code>
         </p>
-        <textarea id="bulk-textarea" class="modal-textarea" placeholder="Aluno 01; 6.0; 6.5; 6.0; 2; 8.0; 8.5; 9.0; 3; 5.5; 8.5; Avanço em vocabulário e simple present"></textarea>
+        <textarea id="bulk-textarea" class="modal-textarea" placeholder="Aluno 01; 6.0; 6.5; 2; 8.2; 8.8; 3; 5.5; 8.5; Avanço em vocabulário e simple present"></textarea>
       </div>
       <div class="modal-footer">
         <button class="btn" onclick="closeBulkModal()" style="border-color: var(--border);">Cancelar</button>
@@ -1113,108 +1109,92 @@
   <div class="status-toast" id="status-toast">Dados atualizados e salvos localmente.</div>
 
   <script>
-    const STORAGE_KEY = 'fecit_2026_modelo_acompanhamento_v1';
+    const STORAGE_KEY = 'fecit_2026_modelo_2x2_v1';
 
-    // Configuração Padrão das 6 Atividades conforme a Metodologia do Plano de Pesquisa
+    // Configuração Padrão das 4 Atividades Reais do Acervo Digital (Modelo 2x2)
     const DEFAULT_ACTIVITIES = {
       trad: [
         {
           id: 't1',
           code: 'T1',
-          title: 'Worksheet Tradicional 01',
-          docType: 'Folha de Atividades (Worksheet)',
-          focus: 'Vocabulário básico (exercício padrão)',
-          month: 'Ago/2026'
+          title: 'Atividade Avaliativa Formal (2º Bimestre)',
+          docType: '6º Ano - Atividade avaliativa 2º bimestre.docx',
+          focus: 'Vocabulário de família, esportes e leitura',
+          month: '2º Bim/2026'
         },
         {
           id: 't2',
           code: 'T2',
-          title: 'Tarefa Cotidiana no Caderno',
-          docType: 'Caderno da Turma / Tarefa',
-          focus: 'Estruturas gramaticais expositivas',
-          month: 'Set/2026'
-        },
-        {
-          id: 't3',
-          code: 'T3',
-          title: 'Atividade Avaliativa Tradicional',
-          docType: 'Atividade Avaliativa',
-          focus: 'Aplicação formal (Gramática/Vocab.)',
-          month: 'Out/2026'
+          title: 'Worksheet Convencional — Simple Present',
+          docType: 'Worksheet_Convencional_6Ano_C_Simple_Present.html',
+          focus: 'Gramática analítica de rotina diária (3ª pessoa, negação e interrogação)',
+          month: 'Ago–Set/2026'
         }
       ],
       gam: [
         {
           id: 'g1',
           code: 'G1',
-          title: 'Fase 01 RPG: Missão de Vocabulário',
-          docType: 'Worksheet Gamificada (Fase 1)',
-          focus: 'Vocabulário contextualizado com personagens',
-          month: 'Ago/2026'
+          title: 'The Memory Eater (Batalha das Guildas)',
+          docType: '6º ano - 🐉 THE MEMORY EATER.docx',
+          focus: 'Vocabulário básico de sobrevivência, To Be e combate cooperativo contra Boss de 1000 HP',
+          month: '04/08/2026'
         },
         {
           id: 'g2',
           code: 'G2',
-          title: 'Fase 02 RPG: Desafio Gramatical',
-          docType: 'Registro em Caderno / Missão RPG',
-          focus: 'Aplicação prática de estruturas gramaticais',
-          month: 'Set/2026'
-        },
-        {
-          id: 'g3',
-          code: 'G3',
-          title: 'Boss Level: Desafio Integrado',
-          docType: 'Atividade Avaliativa (Boss Level)',
-          focus: 'Resolução de problemas (Gramática + Vocab.)',
+          title: 'Dailyville English Quest (Missões & Final Boss)',
+          docType: 'Dailyville_English_Quest.html',
+          focus: 'Simple Present e advérbios de frequência aplicados no resgate do relógio e combate ao Lord Chronos',
           month: 'Out/2026'
         }
       ]
     };
 
-    // Gerador Determinístico de Dados Fictícios para 29 Alunos (Aluno 01 a Aluno 29)
+    // Gerador Determinístico de Dados Fictícios para 29 Alunos (Aluno 01 a Aluno 29) no Modelo 2x2
     function generateDefaultStudents() {
       const notesSample = [
-        'Aplicação consistente de vocabulário nas Fases e Boss Level',
-        'Registros completos na Worksheet gamificada; maior interesse',
-        'Avanço expressivo na aplicação prática de estruturas gramaticais',
-        'Participação ativa nos desafios de RPG; caderno organizado',
-        'Superou dificuldades em gramática durante o Boss Level',
+        'Alto desempenho lexical em The Memory Eater e no Boss de Dailyville',
+        'Registros completos em Dailyville English Quest; maior engajamento',
+        'Avanço expressivo na aplicação do Simple Present nas missões RPG',
+        'Participação ativa na Guilda contra o Boss de 1000 HP; caderno organizado',
+        'Superou dúvidas de 3ª pessoa (-s/-es) durante o Final Boss Lord Chronos',
         'Bom desempenho geral; engajamento elevado nas missões de RPG',
-        'Evolução gradual entre pré-teste e pós-teste pedagógico',
-        'Maior autonomia na resolução das fases gamificadas'
+        'Evolução consistente entre pré-teste e pós-teste pedagógico',
+        'Maior autonomia na resolução das quests de Dailyville vs. Worksheet'
       ];
 
       const rawProfiles = [
-        // [t1, t2, t3, engT, g1, g2, g3, engG, pre, post]
-        [6.0, 6.5, 6.2, 2, 8.2, 8.5, 8.8, 3, 5.5, 8.5],
-        [5.5, 5.8, 6.0, 2, 7.8, 8.0, 8.4, 3, 5.0, 8.0],
-        [7.2, 7.5, 7.4, 3, 8.8, 9.0, 9.2, 3, 7.0, 9.2],
-        [4.8, 5.2, 5.0, 1, 7.2, 7.5, 7.8, 3, 4.5, 7.5],
-        [6.5, 6.2, 6.8, 2, 8.0, 8.4, 8.6, 3, 6.0, 8.4],
-        [5.0, 5.4, 5.2, 1, 7.4, 7.6, 8.0, 2, 4.8, 7.6],
-        [8.0, 7.8, 8.2, 3, 9.2, 9.4, 9.6, 3, 7.5, 9.5],
-        [5.8, 6.0, 5.6, 2, 7.6, 8.2, 8.5, 3, 5.2, 8.2],
-        [6.2, 6.4, 6.5, 2, 7.8, 8.0, 8.2, 3, 5.8, 8.0],
-        [4.5, 4.8, 5.0, 1, 6.8, 7.2, 7.5, 2, 4.2, 7.2],
-        [7.0, 6.8, 7.2, 2, 8.5, 8.8, 9.0, 3, 6.5, 8.8],
-        [5.2, 5.5, 5.8, 2, 7.5, 7.8, 8.2, 3, 5.0, 7.8],
-        [6.8, 7.0, 6.6, 2, 8.4, 8.6, 8.8, 3, 6.2, 8.6],
-        [5.4, 5.0, 5.6, 1, 7.2, 7.8, 8.0, 3, 4.8, 7.8],
-        [7.5, 7.6, 7.8, 3, 8.6, 9.0, 9.2, 3, 7.2, 9.0],
-        [6.0, 5.8, 6.2, 2, 7.9, 8.1, 8.5, 3, 5.6, 8.2],
-        [4.6, 5.0, 4.8, 1, 6.9, 7.4, 7.6, 2, 4.4, 7.4],
-        [6.4, 6.6, 6.8, 2, 8.2, 8.4, 8.7, 3, 6.0, 8.5],
-        [5.6, 5.9, 6.1, 2, 7.7, 8.0, 8.3, 3, 5.4, 8.0],
-        [8.2, 8.4, 8.0, 3, 9.4, 9.5, 9.8, 3, 7.8, 9.6],
-        [5.0, 5.2, 5.5, 1, 7.3, 7.6, 7.9, 3, 4.6, 7.5],
-        [6.6, 6.5, 6.9, 2, 8.1, 8.5, 8.8, 3, 6.2, 8.6],
-        [5.8, 6.2, 6.0, 2, 7.5, 7.9, 8.1, 2, 5.5, 7.9],
-        [4.9, 5.1, 5.3, 1, 7.0, 7.5, 7.8, 3, 4.5, 7.6],
-        [7.1, 7.3, 7.0, 2, 8.6, 8.8, 9.1, 3, 6.8, 8.9],
-        [6.3, 6.0, 6.4, 2, 8.0, 8.2, 8.5, 3, 5.8, 8.3],
-        [5.3, 5.6, 5.4, 1, 7.4, 7.7, 8.1, 3, 5.0, 7.8],
-        [6.9, 7.1, 7.2, 3, 8.3, 8.7, 8.9, 3, 6.5, 8.7],
-        [5.7, 5.9, 6.0, 2, 7.8, 8.3, 8.6, 3, 5.3, 8.3]
+        // [t1, t2, engT, g1, g2, engG, pre, post]
+        [6.0, 6.5, 2, 8.2, 8.8, 3, 5.5, 8.5],
+        [5.5, 6.0, 2, 7.8, 8.4, 3, 5.0, 8.0],
+        [7.2, 7.5, 3, 8.8, 9.2, 3, 7.0, 9.2],
+        [4.8, 5.2, 1, 7.2, 7.8, 3, 4.5, 7.5],
+        [6.5, 6.8, 2, 8.0, 8.6, 3, 6.0, 8.4],
+        [5.0, 5.4, 1, 7.4, 8.0, 2, 4.8, 7.6],
+        [8.0, 8.2, 3, 9.2, 9.6, 3, 7.5, 9.5],
+        [5.8, 6.0, 2, 7.6, 8.5, 3, 5.2, 8.2],
+        [6.2, 6.5, 2, 7.8, 8.2, 3, 5.8, 8.0],
+        [4.5, 5.0, 1, 6.8, 7.5, 2, 4.2, 7.2],
+        [7.0, 7.2, 2, 8.5, 9.0, 3, 6.5, 8.8],
+        [5.2, 5.8, 2, 7.5, 8.2, 3, 5.0, 7.8],
+        [6.8, 7.0, 2, 8.4, 8.8, 3, 6.2, 8.6],
+        [5.4, 5.6, 1, 7.2, 8.0, 3, 4.8, 7.8],
+        [7.5, 7.8, 3, 8.6, 9.2, 3, 7.2, 9.0],
+        [6.0, 6.2, 2, 7.9, 8.5, 3, 5.6, 8.2],
+        [4.6, 5.0, 1, 6.9, 7.6, 2, 4.4, 7.4],
+        [6.4, 6.8, 2, 8.2, 8.7, 3, 6.0, 8.5],
+        [5.6, 6.1, 2, 7.7, 8.3, 3, 5.4, 8.0],
+        [8.2, 8.4, 3, 9.4, 9.8, 3, 7.8, 9.6],
+        [5.0, 5.5, 1, 7.3, 7.9, 3, 4.6, 7.5],
+        [6.6, 6.9, 2, 8.1, 8.8, 3, 6.2, 8.6],
+        [5.8, 6.2, 2, 7.5, 8.1, 2, 5.5, 7.9],
+        [4.9, 5.3, 1, 7.0, 7.8, 3, 4.5, 7.6],
+        [7.1, 7.3, 2, 8.6, 9.1, 3, 6.8, 8.9],
+        [6.3, 6.4, 2, 8.0, 8.5, 3, 5.8, 8.3],
+        [5.3, 5.6, 1, 7.4, 8.1, 3, 5.0, 7.8],
+        [6.9, 7.2, 3, 8.3, 8.9, 3, 6.5, 8.7],
+        [5.7, 6.0, 2, 7.8, 8.6, 3, 5.3, 8.3]
       ];
 
       return rawProfiles.map((p, idx) => {
@@ -1225,14 +1205,12 @@
           name: `Aluno ${num}`,
           t1: p[0],
           t2: p[1],
-          t3: p[2],
-          engT: p[3],
-          g1: p[4],
-          g2: p[5],
-          g3: p[6],
-          engG: p[7],
-          pre: p[8],
-          post: p[9],
+          engT: p[2],
+          g1: p[3],
+          g2: p[4],
+          engG: p[5],
+          pre: p[6],
+          post: p[7],
           notes: notesSample[idx % notesSample.length]
         };
       });
@@ -1253,7 +1231,7 @@
           if (parsed && Array.isArray(parsed.students) && parsed.students.length === 29) {
             appState.students = parsed.students;
           }
-          if (parsed && parsed.activities) {
+          if (parsed && parsed.activities && Array.isArray(parsed.activities.trad) && parsed.activities.trad.length === 2) {
             appState.activities = parsed.activities;
           }
         }
@@ -1297,30 +1275,28 @@
       return sign + val.toFixed(decimals).replace('.', ',');
     }
 
-    // Cálculos Individuais por Aluno
+    // Cálculos Individuais por Aluno (Modelo 2x2: 2 Tradicionais x 2 Gamificadas)
     function computeStudentMetrics(st) {
       const t1 = clampScore(st.t1);
       const t2 = clampScore(st.t2);
-      const t3 = clampScore(st.t3);
       const g1 = clampScore(st.g1);
       const g2 = clampScore(st.g2);
-      const g3 = clampScore(st.g3);
       const pre = clampScore(st.pre);
       const post = clampScore(st.post);
 
-      const sumT = t1 + t2 + t3;
-      const avgT = sumT / 3;
+      const sumT = t1 + t2;
+      const avgT = sumT / 2;
 
-      const sumG = g1 + g2 + g3;
-      const avgG = sumG / 3;
+      const sumG = g1 + g2;
+      const avgG = sumG / 2;
 
       const diffGT = avgG - avgT;
       const diffPct = avgT > 0 ? ((avgG - avgT) / avgT) * 100 : 0;
-      const avgAll = (sumT + sumG) / 6;
+      const avgAll = (sumT + sumG) / 4;
       const testGain = post - pre;
 
       return {
-        t1, t2, t3, g1, g2, g3, pre, post,
+        t1, t2, g1, g2, pre, post,
         sumT, avgT, sumG, avgG, diffGT, diffPct, avgAll, testGain
       };
     }
@@ -1331,7 +1307,7 @@
       return Math.max(0, Math.min(10, n));
     }
 
-    // Renderizar Cartões Editáveis das 6 Atividades
+    // Renderizar Cartões Editáveis das 4 Atividades
     function renderActivitiesConfig() {
       const tradContainer = document.getElementById('trad-act-config');
       const gamContainer = document.getElementById('gam-act-config');
@@ -1348,7 +1324,7 @@
           <input type="text" class="act-input" style="font-weight:400;font-size:11px;color:var(--text-muted);"
             value="${escapeHtml(act.docType)}"
             onchange="updateActivityMeta('trad', ${idx}, 'docType', this.value)"
-            title="Fonte documental (Worksheet, Caderno, Atividade Avaliativa)">
+            title="Arquivo fonte no Acervo Digital">
           <div class="act-meta">
             <span>Foco: ${escapeHtml(act.focus)}</span>
           </div>
@@ -1363,11 +1339,11 @@
           </div>
           <input type="text" class="act-input" value="${escapeHtml(act.title)}"
             onchange="updateActivityMeta('gam', ${idx}, 'title', this.value)"
-            title="Clique para editar o título da fase ou Boss Level">
+            title="Clique para editar o título da atividade gamificada">
           <input type="text" class="act-input" style="font-weight:400;font-size:11px;color:var(--text-muted);"
             value="${escapeHtml(act.docType)}"
             onchange="updateActivityMeta('gam', ${idx}, 'docType', this.value)"
-            title="Fonte documental (Worksheet Gamificada, Missão RPG, Boss Level)">
+            title="Arquivo fonte no Acervo Digital">
           <div class="act-meta">
             <span>Foco: ${escapeHtml(act.focus)}</span>
           </div>
@@ -1385,7 +1361,7 @@
       appState.activities.gam.forEach(a => {
         const th = document.getElementById(`th-${a.id}`);
         if (th) {
-          th.textContent = a.id === 'g3' ? 'G3 (Boss)' : `${a.code} (Fase ${a.id.slice(1)})`;
+          th.textContent = a.id === 'g1' ? 'G1 (Memory Eater)' : 'G2 (Dailyville)';
           th.title = `${a.title} (${a.docType})`;
         }
       });
@@ -1441,7 +1417,7 @@
                 aria-label="Nome ou código do ${escapeHtml(st.code)}">
             </td>
 
-            <!-- 3 Atividades Tradicionais -->
+            <!-- 2 Atividades Tradicionais -->
             <td class="td-trad col-act">
               <input type="number" step="0.1" min="0" max="10" class="cell-input-num trad-num"
                 value="${m.t1.toFixed(1)}"
@@ -1453,11 +1429,6 @@
                 onchange="updateStudentField(${st.id}, 't2', this.value)">
             </td>
             <td class="td-trad col-act">
-              <input type="number" step="0.1" min="0" max="10" class="cell-input-num trad-num"
-                value="${m.t3.toFixed(1)}"
-                onchange="updateStudentField(${st.id}, 't3', this.value)">
-            </td>
-            <td class="td-trad col-act">
               <select class="cell-select ${engTClass}" onchange="updateStudentField(${st.id}, 'engT', Number(this.value))">
                 <option value="1" ${st.engT == 1 ? 'selected' : ''}>1 - Baixo</option>
                 <option value="2" ${st.engT == 2 ? 'selected' : ''}>2 - Regular</option>
@@ -1467,7 +1438,7 @@
             <td class="td-trad" id="row-${st.id}-sumT">${fmt(m.sumT, 1)}</td>
             <td class="td-trad-sum" id="row-${st.id}-avgT">${fmt(m.avgT, 2)}</td>
 
-            <!-- 3 Atividades Gamificadas -->
+            <!-- 2 Atividades Gamificadas -->
             <td class="td-gam col-act">
               <input type="number" step="0.1" min="0" max="10" class="cell-input-num gam-num"
                 value="${m.g1.toFixed(1)}"
@@ -1477,11 +1448,6 @@
               <input type="number" step="0.1" min="0" max="10" class="cell-input-num gam-num"
                 value="${m.g2.toFixed(1)}"
                 onchange="updateStudentField(${st.id}, 'g2', this.value)">
-            </td>
-            <td class="td-gam col-act">
-              <input type="number" step="0.1" min="0" max="10" class="cell-input-num gam-num"
-                value="${m.g3.toFixed(1)}"
-                onchange="updateStudentField(${st.id}, 'g3', this.value)">
             </td>
             <td class="td-gam col-act">
               <select class="cell-select ${engGClass}" onchange="updateStudentField(${st.id}, 'engG', Number(this.value))">
@@ -1532,7 +1498,7 @@
       const student = appState.students.find(s => s.id === id);
       if (!student) return;
 
-      if (['t1', 't2', 't3', 'g1', 'g2', 'g3', 'pre', 'post'].includes(field)) {
+      if (['t1', 't2', 'g1', 'g2', 'pre', 'post'].includes(field)) {
         student[field] = clampScore(rawValue);
       } else if (['engT', 'engG'].includes(field)) {
         student[field] = Math.max(1, Math.min(3, parseInt(rawValue, 10) || 2));
@@ -1548,8 +1514,8 @@
     function renderSummaryAndCharts() {
       const n = appState.students.length || 1;
       let acc = {
-        t1: 0, t2: 0, t3: 0, engT: 0, sumT: 0, avgT: 0,
-        g1: 0, g2: 0, g3: 0, engG: 0, sumG: 0, avgG: 0,
+        t1: 0, t2: 0, engT: 0, sumT: 0, avgT: 0,
+        g1: 0, g2: 0, engG: 0, sumG: 0, avgG: 0,
         pre: 0, post: 0, testGain: 0, diffGT: 0, avgAll: 0,
         gamHigherCount: 0, testImprovedCount: 0,
         engTHighCount: 0, engGHighCount: 0
@@ -1559,14 +1525,12 @@
         const m = computeStudentMetrics(st);
         acc.t1 += m.t1;
         acc.t2 += m.t2;
-        acc.t3 += m.t3;
         acc.engT += Number(st.engT || 2);
         acc.sumT += m.sumT;
         acc.avgT += m.avgT;
 
         acc.g1 += m.g1;
         acc.g2 += m.g2;
-        acc.g3 += m.g3;
         acc.engG += Number(st.engG || 2);
         acc.sumG += m.sumG;
         acc.avgG += m.avgG;
@@ -1585,14 +1549,12 @@
 
       const meanT1 = acc.t1 / n;
       const meanT2 = acc.t2 / n;
-      const meanT3 = acc.t3 / n;
       const meanEngT = acc.engT / n;
       const meanSumT = acc.sumT / n;
       const meanAvgT = acc.avgT / n;
 
       const meanG1 = acc.g1 / n;
       const meanG2 = acc.g2 / n;
-      const meanG3 = acc.g3 / n;
       const meanEngG = acc.engG / n;
       const meanSumG = acc.sumG / n;
       const meanAvgG = acc.avgG / n;
@@ -1637,14 +1599,12 @@
           <td class="sticky-col-2">Média da Turma (N = ${n} Alunos)</td>
           <td class="col-act">${fmt(meanT1, 2)}</td>
           <td class="col-act">${fmt(meanT2, 2)}</td>
-          <td class="col-act">${fmt(meanT3, 2)}</td>
           <td class="col-act">${fmt(meanEngT, 2)} / 3</td>
           <td>${fmt(meanSumT, 1)}</td>
           <td>${fmt(meanAvgT, 2)}</td>
 
           <td class="col-act">${fmt(meanG1, 2)}</td>
           <td class="col-act">${fmt(meanG2, 2)}</td>
-          <td class="col-act">${fmt(meanG3, 2)}</td>
           <td class="col-act">${fmt(meanEngG, 2)} / 3</td>
           <td>${fmt(meanSumG, 1)}</td>
           <td>${fmt(meanAvgG, 2)}</td>
@@ -1660,14 +1620,12 @@
       `;
       applyViewModeColumns();
 
-      // Renderizar Barras Visuais por Atividade
+      // Renderizar Barras Visuais por Atividade (4 Atividades + Pré e Pós-Teste)
       const actBars = [
         { label: `T1: ${appState.activities.trad[0].title}`, val: meanT1, type: 'trad' },
         { label: `T2: ${appState.activities.trad[1].title}`, val: meanT2, type: 'trad' },
-        { label: `T3: ${appState.activities.trad[2].title}`, val: meanT3, type: 'trad' },
         { label: `G1: ${appState.activities.gam[0].title}`, val: meanG1, type: 'gam' },
         { label: `G2: ${appState.activities.gam[1].title}`, val: meanG2, type: 'gam' },
-        { label: `G3: ${appState.activities.gam[2].title}`, val: meanG3, type: 'gam' },
         { label: `Pré-Teste Pedagógico (Linha de Base)`, val: meanPre, type: 'eval' },
         { label: `Pós-Teste Pedagógico (Consolidação)`, val: meanPost, type: 'eval' }
       ];
@@ -1682,16 +1640,14 @@
         </div>
       `).join('');
 
-      // Renderizar Barras Visuais por Eixo Metodológico (Vocabulário, Gramática, Boss Level e Engajamento)
+      // Renderizar Barras Visuais por Par Metodológico (Vocabulário T1xG1, Gramática T2xG2 e Engajamento)
       const criteriaBars = [
-        { label: 'Vocabulário — Tradicional (T1)', val: meanT1, max: 10, type: 'trad', suffix: '/10' },
-        { label: 'Vocabulário — Fase 1 RPG (G1)', val: meanG1, max: 10, type: 'gam', suffix: '/10' },
-        { label: 'Gramática — Tradicional (T2)', val: meanT2, max: 10, type: 'trad', suffix: '/10' },
-        { label: 'Gramática — Fase 2 RPG (G2)', val: meanG2, max: 10, type: 'gam', suffix: '/10' },
-        { label: 'Avaliativa Tradicional (T3)', val: meanT3, max: 10, type: 'trad', suffix: '/10' },
-        { label: 'Desafio Integrado — Boss Level (G3)', val: meanG3, max: 10, type: 'gam', suffix: '/10' },
-        { label: 'Engajamento Documental Tradicional', val: meanEngT, max: 3, type: 'trad', suffix: '/3,0' },
-        { label: 'Engajamento Documental Gamificado', val: meanEngG, max: 3, type: 'gam', suffix: '/3,0' }
+        { label: 'Par 1 (Vocab./Leitura) — Tradicional (T1)', val: meanT1, max: 10, type: 'trad', suffix: '/10' },
+        { label: 'Par 1 (Vocab./Boss HP) — The Memory Eater (G1)', val: meanG1, max: 10, type: 'gam', suffix: '/10' },
+        { label: 'Par 2 (Simple Present) — Worksheet Convencional (T2)', val: meanT2, max: 10, type: 'trad', suffix: '/10' },
+        { label: 'Par 2 (Simple Present/Boss) — Dailyville Quest (G2)', val: meanG2, max: 10, type: 'gam', suffix: '/10' },
+        { label: 'Engajamento Documental Tradicional (1 a 3)', val: meanEngT, max: 3, type: 'trad', suffix: '/3,0' },
+        { label: 'Engajamento Documental Gamificado (1 a 3)', val: meanEngG, max: 3, type: 'gam', suffix: '/3,0' }
       ];
 
       document.getElementById('criteria-bars-container').innerHTML = criteriaBars.map(c => {
@@ -1726,11 +1682,11 @@
       if (mode === 'all') {
         actCols.forEach(el => el.style.display = '');
         evalCols.forEach(el => el.style.display = '');
-        groupActHeaders.forEach(el => el.setAttribute('colspan', '6'));
+        groupActHeaders.forEach(el => el.setAttribute('colspan', '5'));
       } else if (mode === 'activities') {
         actCols.forEach(el => el.style.display = '');
         evalCols.forEach(el => el.style.display = 'none');
-        groupActHeaders.forEach(el => el.setAttribute('colspan', '6'));
+        groupActHeaders.forEach(el => el.setAttribute('colspan', '5'));
       } else if (mode === 'summary') {
         actCols.forEach(el => el.style.display = 'none');
         evalCols.forEach(el => el.style.display = '');
@@ -1741,8 +1697,8 @@
     // Limpar Apenas as Notas (Mantendo os 29 Alunos Prontos para Preenchimento)
     function clearScoresOnly() {
       appState.students.forEach(st => {
-        st.t1 = 0; st.t2 = 0; st.t3 = 0; st.engT = 2;
-        st.g1 = 0; st.g2 = 0; st.g3 = 0; st.engG = 2;
+        st.t1 = 0; st.t2 = 0; st.engT = 2;
+        st.g1 = 0; st.g2 = 0; st.engG = 2;
         st.pre = 0; st.post = 0;
         st.notes = '';
       });
@@ -1765,10 +1721,10 @@
     function exportCSV() {
       const headers = [
         'Codigo', 'Identificacao_Aluno',
-        'T1_Tradicional', 'T2_Tradicional', 'T3_Tradicional', 'Engajamento_Tradicional(1-3)', 'Total_Tradicional', 'Media_Tradicional',
-        'G1_Fase1_RPG', 'G2_Fase2_RPG', 'G3_Boss_Level', 'Engajamento_Gamificado(1-3)', 'Total_Gamificado', 'Media_Gamificada',
+        'T1_Avaliativa_2Bim', 'T2_Worksheet_Convencional', 'Engajamento_Tradicional(1-3)', 'Total_Tradicional(0-20)', 'Media_Tradicional',
+        'G1_The_Memory_Eater_RPG', 'G2_Dailyville_English_Quest_RPG', 'Engajamento_Gamificado(1-3)', 'Total_Gamificado(0-20)', 'Media_Gamificada',
         'Pre_Teste', 'Pos_Teste', 'Avanco_Pos_Pre',
-        'Diferencial_Gam_vs_Trad', 'Media_Geral_6_Atividades', 'Observacoes_Evidencias_Documentais'
+        'Diferencial_Gam_vs_Trad', 'Media_Geral_4_Atividades', 'Observacoes_Evidencias_Documentais'
       ];
 
       const rows = appState.students.map(st => {
@@ -1776,8 +1732,8 @@
         return [
           st.code,
           `"${(st.name || '').replace(/"/g, '""')}"`,
-          fmt(m.t1, 1), fmt(m.t2, 1), fmt(m.t3, 1), st.engT, fmt(m.sumT, 1), fmt(m.avgT, 2),
-          fmt(m.g1, 1), fmt(m.g2, 1), fmt(m.g3, 1), st.engG, fmt(m.sumG, 1), fmt(m.avgG, 2),
+          fmt(m.t1, 1), fmt(m.t2, 1), st.engT, fmt(m.sumT, 1), fmt(m.avgT, 2),
+          fmt(m.g1, 1), fmt(m.g2, 1), st.engG, fmt(m.sumG, 1), fmt(m.avgG, 2),
           fmt(m.pre, 1), fmt(m.post, 1), fmt(m.testGain, 1),
           fmt(m.diffGT, 2), fmt(m.avgAll, 2),
           `"${(st.notes || '').replace(/"/g, '""')}"`
@@ -1789,7 +1745,7 @@
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'acompanhamento_desempenho_fecit_29_alunos.csv';
+      a.download = 'acompanhamento_desempenho_fecit_29_alunos_2x2.csv';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -1825,15 +1781,13 @@
         if (cols[0]) st.name = cols[0];
         if (cols[1] !== undefined && cols[1] !== '') st.t1 = clampScore(cols[1]);
         if (cols[2] !== undefined && cols[2] !== '') st.t2 = clampScore(cols[2]);
-        if (cols[3] !== undefined && cols[3] !== '') st.t3 = clampScore(cols[3]);
-        if (cols[4] !== undefined && cols[4] !== '') st.engT = Math.max(1, Math.min(3, parseInt(cols[4], 10) || 2));
-        if (cols[5] !== undefined && cols[5] !== '') st.g1 = clampScore(cols[5]);
-        if (cols[6] !== undefined && cols[6] !== '') st.g2 = clampScore(cols[6]);
-        if (cols[7] !== undefined && cols[7] !== '') st.g3 = clampScore(cols[7]);
-        if (cols[8] !== undefined && cols[8] !== '') st.engG = Math.max(1, Math.min(3, parseInt(cols[8], 10) || 3));
-        if (cols[9] !== undefined && cols[9] !== '') st.pre = clampScore(cols[9]);
-        if (cols[10] !== undefined && cols[10] !== '') st.post = clampScore(cols[10]);
-        if (cols[11] !== undefined) st.notes = cols[11];
+        if (cols[3] !== undefined && cols[3] !== '') st.engT = Math.max(1, Math.min(3, parseInt(cols[3], 10) || 2));
+        if (cols[4] !== undefined && cols[4] !== '') st.g1 = clampScore(cols[4]);
+        if (cols[5] !== undefined && cols[5] !== '') st.g2 = clampScore(cols[5]);
+        if (cols[6] !== undefined && cols[6] !== '') st.engG = Math.max(1, Math.min(3, parseInt(cols[6], 10) || 3));
+        if (cols[7] !== undefined && cols[7] !== '') st.pre = clampScore(cols[7]);
+        if (cols[8] !== undefined && cols[8] !== '') st.post = clampScore(cols[8]);
+        if (cols[9] !== undefined) st.notes = cols[9];
         updatedCount++;
       });
 
