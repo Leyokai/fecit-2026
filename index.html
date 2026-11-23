@@ -30,6 +30,8 @@
   --accent-guia-light: #ede9fe;
   --accent-acervo: #059669;    /* Esmeralda para o Acervo Digital */
   --accent-acervo-light: #d1fae5;
+  --accent-planilha: #7c3aed;  /* Violeta Gamificado para a Planilha */
+  --accent-planilha-light: #f3e8ff;
   --fecit-gold: #f59e0b;       /* Dourado institucional */
   --fecit-gold-light: #fef3c7;
   
@@ -314,7 +316,7 @@ body {
 
 .portal-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 22px;
   margin-bottom: 26px;
 }
@@ -365,6 +367,10 @@ body {
 
 .card-banner.acervo-theme {
   background: linear-gradient(135deg, #065f46 0%, #059669 100%);
+}
+
+.card-banner.planilha-theme {
+  background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 100%);
 }
 
 .card-icon-box {
@@ -458,6 +464,11 @@ body {
   color: var(--accent-acervo);
 }
 
+.planilha-theme-check {
+  background: var(--accent-planilha-light);
+  color: var(--accent-planilha);
+}
+
 /* Card Action Button Area */
 .card-action {
   margin-top: auto;
@@ -489,6 +500,10 @@ body {
   color: var(--accent-acervo);
 }
 
+.planilha-link-text {
+  color: var(--accent-planilha);
+}
+
 .arrow-circle {
   width: 32px;
   height: 32px;
@@ -514,6 +529,11 @@ body {
   color: var(--accent-acervo);
 }
 
+.planilha-arrow {
+  background: var(--accent-planilha-light);
+  color: var(--accent-planilha);
+}
+
 .portal-card:hover .arrow-circle {
   transform: translateX(4px);
 }
@@ -530,6 +550,11 @@ body {
 
 .portal-card:hover .acervo-arrow {
   background: var(--accent-acervo);
+  color: #ffffff;
+}
+
+.portal-card:hover .planilha-arrow {
+  background: var(--accent-planilha);
   color: #ffffff;
 }
 
@@ -850,7 +875,7 @@ body {
       <div class="welcome-content">
         <h3>Como utilizar este aplicativo</h3>
         <p>
-          Este portal reúne os três ambientes centrais da sua pesquisa. O <strong>Guia de Pesquisa</strong> acompanha as missões investigativas e o simulador da banca; o <strong>Manual</strong> orienta a elaboração manuscrita do caderno físico oficial; e o <strong>Acervo Digital</strong> disponibiliza na tela os planos, artigos científicos, atividades e as 35 fotos da pesquisa.
+          Este portal reúne os quatro ambientes centrais da sua pesquisa. O <strong>Guia de Pesquisa</strong> acompanha as missões investigativas e o simulador da banca; o <strong>Manual</strong> orienta a elaboração manuscrita do caderno físico oficial; o <strong>Acervo Digital</strong> disponibiliza os planos, artigos científicos, atividades e as 35 fotos da pesquisa; e a <strong>Planilha de Desempenho</strong> sistematiza os dados dos 29 alunos entre atividades tradicionais e gamificadas.
         </p>
       </div>
     </section>
@@ -1008,6 +1033,55 @@ body {
             <div class="card-action">
               <span class="btn-indicator acervo-link-text">Explorar Acervo (66 arquivos)</span>
               <div class="arrow-circle acervo-arrow" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- CARD 4: Planilha de Desempenho & Dados -->
+        <a href="planilha/index.html" class="portal-card" aria-label="Acessar a Planilha de Desempenho e Dados">
+          <div class="card-banner planilha-theme">
+            <div class="card-icon-box" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <div class="card-header-titles">
+              <span class="card-tag">Análise Quantitativa · 6º Ano</span>
+              <h3>Planilha de Desempenho &amp; Dados</h3>
+            </div>
+          </div>
+          <div class="card-content">
+            <p class="card-desc">
+              Acompanhamento interativo do desempenho de 29 alunos em 6 atividades (3 tradicionais vs. 3 gamificadas / RPG), pré-teste e pós-teste pedagógicos.
+            </p>
+            <ul class="card-features">
+              <li>
+                <span class="feature-check planilha-theme-check">✓</span>
+                <span>Comparação direta: Atividades Tradicionais vs. Fases RPG</span>
+              </li>
+              <li>
+                <span class="feature-check planilha-theme-check">✓</span>
+                <span>Indicadores de evolução: Pré-teste, Pós-teste e Ganho</span>
+              </li>
+              <li>
+                <span class="feature-check planilha-theme-check">✓</span>
+                <span>Cálculos automáticos de médias, totais e diferenciais</span>
+              </li>
+              <li>
+                <span class="feature-check planilha-theme-check">✓</span>
+                <span>Totalmente editável e exportação em formato CSV</span>
+              </li>
+            </ul>
+            <div class="card-action">
+              <span class="btn-indicator planilha-link-text">Abrir Planilha de Desempenho</span>
+              <div class="arrow-circle planilha-arrow" aria-hidden="true">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>

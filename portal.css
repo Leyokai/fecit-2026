@@ -14,6 +14,8 @@
   --accent-guia-light: #ede9fe;
   --accent-acervo: #059669;    /* Esmeralda para o Acervo Digital */
   --accent-acervo-light: #d1fae5;
+  --accent-planilha: #7c3aed;  /* Violeta Gamificado para a Planilha */
+  --accent-planilha-light: #f3e8ff;
   --fecit-gold: #f59e0b;       /* Dourado institucional */
   --fecit-gold-light: #fef3c7;
   
@@ -298,7 +300,7 @@ body {
 
 .portal-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 22px;
   margin-bottom: 26px;
 }
@@ -349,6 +351,10 @@ body {
 
 .card-banner.acervo-theme {
   background: linear-gradient(135deg, #065f46 0%, #059669 100%);
+}
+
+.card-banner.planilha-theme {
+  background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 100%);
 }
 
 .card-icon-box {
@@ -442,6 +448,11 @@ body {
   color: var(--accent-acervo);
 }
 
+.planilha-theme-check {
+  background: var(--accent-planilha-light);
+  color: var(--accent-planilha);
+}
+
 /* Card Action Button Area */
 .card-action {
   margin-top: auto;
@@ -473,6 +484,10 @@ body {
   color: var(--accent-acervo);
 }
 
+.planilha-link-text {
+  color: var(--accent-planilha);
+}
+
 .arrow-circle {
   width: 32px;
   height: 32px;
@@ -498,6 +513,11 @@ body {
   color: var(--accent-acervo);
 }
 
+.planilha-arrow {
+  background: var(--accent-planilha-light);
+  color: var(--accent-planilha);
+}
+
 .portal-card:hover .arrow-circle {
   transform: translateX(4px);
 }
@@ -514,6 +534,11 @@ body {
 
 .portal-card:hover .acervo-arrow {
   background: var(--accent-acervo);
+  color: #ffffff;
+}
+
+.portal-card:hover .planilha-arrow {
+  background: var(--accent-planilha);
   color: #ffffff;
 }
 

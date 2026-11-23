@@ -16,7 +16,8 @@ const CORE_ASSETS = [
   './manual/manual.js',
   './acervo/index.html',
   './acervo/acervo.css',
-  './acervo/acervo.js'
+  './acervo/acervo.js',
+  './planilha/index.html'
 ];
 
 const ACERVO_ASSETS = [
